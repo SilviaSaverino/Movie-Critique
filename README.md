@@ -21,15 +21,22 @@ Where everyone is welcomed in joining the conversation with other passionate cin
 
 ## User Stories:
 
-- As a user, I want to be able to search for a specific movie and view its reviews so that I can decide whether or not to watch it.
-- As a user, I want to be able to write and submit my own review for a movie so that I can share my thoughts with others.
-- As a user, I want to be able to edit and correct my own review
-- As a user, I want to be able to sort reviews by rating, date, or number of likes so that I can easily find the most helpful reviews.
+As a Site User I want to be able to:
+- register an account so that I can comment and like
+- search for a specific movie and view its reviews so that I can decide whether or not to watch it.
+- write and submit a review for a movie so that I can share my thoughts with others.
+- edit and correct my own reviews
+- leave comments on a posted reviews so that I can be involved in the conversation
+- sort reviews by rating, date, or number of likes so that I can easily find the most helpful reviews.
 
 ## Admin stories:
 
-- As an admin, I want to be able to moderate reviews to ensure that they are appropriate and do not contain any offensive content.
-- As an admin, I want to be able to delete spam or fake reviews that are submitted to the site.
-- As an admin, I want to be able to view statistics on the number of reviews and ratings submitted to the site so that I can track the site's performance.
+As a site Admin, I want to be able to: 
+- create draft posts so that I can finish writing the content later
+- update posts so that movie description are up to date
+- read and moderate reviews to ensure that they are appropriate and do not contain any offensive content.
+- delete spam or fake reviews that are submitted to the site.
+- view statistics on the number of reviews and ratings submitted to the site so that I can track the site's performance.
+
 
 
