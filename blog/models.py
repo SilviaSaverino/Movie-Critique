@@ -13,7 +13,6 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts")
-    genre = models.ForeignKey('Genre', on_delete=models.SET_NULL, null=True)
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
