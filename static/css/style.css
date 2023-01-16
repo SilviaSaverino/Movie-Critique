@@ -1,7 +1,22 @@
 footer {
-    background-color: pink;
+  background-color: pink;
 }
 
 .navbar {
-    background-color: red;
+  background-color: red;
+}
+
+/*-------------------------------------------------------------cards----------------------------------------*/
+.card {
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 2px 2px 5px #ccc;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.588);
 }
