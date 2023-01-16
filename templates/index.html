@@ -9,28 +9,33 @@
 
       {% for post in post_list %}
       <div class="col-md-3">
-        <div class="card">
-          <img src="{{ post.image }}" class="card-img-top" alt="{{ post.name }}">
-          <div class="card-body">
-            <div class="image-container">
-              {% if "placeholder" in post.featured_image.url %}
-              <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-              {% else %}
-              <img class="card-img-top" src="{{ post.featured_image.url }}">
-              {% endif %}
-              <div class="image-flash">
-                <p class="author">Author: {{ post.author }}</p>
+        <div class="card-container">
+          <div class="card">
+            <img src="{{ post.image }}" class="card-img-top" alt="{{ post.name }}">
+            <div class="card-body">
+              <div class="image-container">
+                {% if "placeholder" in post.featured_image.url %}
+                <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                {% else %}
+                <img class="card-img-top" src="{{ post.featured_image.url }}">
+                {% endif %}
+                <div class="image-flash">
+                  <p class="author">Author: {{ post.author }}</p>
+                </div>
               </div>
-            </div>
-            <div>
-              <h5 class="card-title">{{ post.title }}</h5>
-              <p class="card-text">{{ post.excerpt }}</p>
-              <a href="#" class="btn btn-primary">View Reviews</a>
-              <a href="#" class="btn btn-secondary">Leave a Review</a>
-            </div>
-            <hr />
-            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-hearth"></i>{{ post.number_of_likes }}</p>
+              
+                
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text">{{ post.excerpt }}</p>
+              
+                <a href="#" class="btn btn-primary">View Reviews</a>
+                <a href="#" class="btn btn-secondary">Leave a Review</a>
+              
+              <hr />
+              <p class="card-text text-muted h6">{{ post.created_on}} <i
+                  class="far fa-hearth"></i>{{ post.number_of_likes }}</p>
 
+            </div>
           </div>
         </div>
       </div>

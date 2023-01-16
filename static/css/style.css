@@ -7,6 +7,17 @@ footer {
 }
 
 /*-------------------------------------------------------------cards----------------------------------------*/
+
+/*.card-container {
+  display: flex; 
+  flex-wrap: wrap; 
+}
+*/
+
+.card-body {
+  max-height: 800px;
+}
+
 .card {
   max-width: 300px;
   border: 1px solid #ccc;
@@ -16,7 +27,37 @@ footer {
   box-shadow: 2px 2px 5px #ccc;
 }
 
+
+
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.588);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.btn-primary {
+  color: white;
+  background-color: blue;
+  margin: 5px auto;
+}
+
+.btn-primary:hover {
+  background-color: rgb(70, 192, 233);
+  color: black;
+}
+
+.btn-secondary {
+  color: white;
+  background-color: rgb(8, 149, 8);
+}
+
+.btn-secondary:hover {
+  color: black;
+  background-color: rgb(65, 233, 53);
 }
