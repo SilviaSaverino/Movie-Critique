@@ -3,25 +3,40 @@
 {% block content %}
 
 <body>
-    <div class="container">
-      <h1 class="text-center mt-5">Movies</h1>
-      <div class="row mt-5">
-        <div class="col-md-4">
-            {% for posts in post %}
-            <div class="col-md-4">
-              <div class="card">
-                <img src="{{ post.image }}" class="card-img-top" alt="{{ post.name }}">
-                <div class="card-body">
-                  <h5 class="card-title">{{ post.name }}</h5>
-                  <p class="card-text">{{ post.description }}</p>
-                  <a href="{% url 'movie_reviews' movie.id %}" class="btn btn-primary">View Reviews</a>
-                  <a href="{% url 'leave_review' movie.id %}" class="btn btn-secondary">Leave a Review</a>
-                </div>
+  <div class="container">
+    <h1 class="text-center mt-5">Movies</h1>
+    <div class="row mt-5">
+
+      {% for posts in post_list %}
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ post.image }}" class="card-img-top" alt="{{ post.name }}">
+          <div class="card-body">
+            <div class="image-container">
+              {% if "placeholder" in post.featured_image.url %}
+              <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+              {% else %}
+              <img class="card-img-top" src="{{ post.featured_image.url }}">
+              {% endif %}
+              <div class="image-flash">
+                <p class="author">Author: {{ post.author }}</p>
               </div>
             </div>
-          {% endfor %}
+            <div>
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.excerpt }}</p>
+              <a href="#" class="btn btn-primary">View Reviews</a>
+              <a href="#" class="btn btn-secondary">Leave a Review</a>
+            </div>
+            <hr />
+            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-hearth"></i>{{ post.number_of_likes }}</p>
+
+          </div>
+        </div>
       </div>
+      {% endfor %}
     </div>
-  </body>
+  </div>
+</body>
 
 {%endblock%}
