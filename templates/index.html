@@ -4,41 +4,22 @@
 
 <body>
     <div class="container">
-      <h1 class="text-center mt-5">Movie Review Website</h1>
+      <h1 class="text-center mt-5">Movies</h1>
       <div class="row mt-5">
         <div class="col-md-4">
-          <div class="card">
-            <img src="movie1.jpg" class="card-img-top" alt="Movie 1">
-            <div class="card-body">
-              <h5 class="card-title">Movie 1</h5>
-              <p class="card-text">Movie description here</p>
-              <a href="#" class="btn btn-primary">View Reviews</a>
-              <a href="#" class="btn btn-secondary">Leave a Review</a>
+            {% for movie in movies %}
+            <div class="col-md-4">
+              <div class="card">
+                <img src="{{ movie.image }}" class="card-img-top" alt="{{ movie.name }}">
+                <div class="card-body">
+                  <h5 class="card-title">{{ movie.name }}</h5>
+                  <p class="card-text">{{ movie.description }}</p>
+                  <a href="{% url 'movie_reviews' movie.id %}" class="btn btn-primary">View Reviews</a>
+                  <a href="{% url 'leave_review' movie.id %}" class="btn btn-secondary">Leave a Review</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="movie2.jpg" class="card-img-top" alt="Movie 2">
-            <div class="card-body">
-              <h5 class="card-title">Movie 2</h5>
-              <p class="card-text">Movie description here</p>
-              <a href="#" class="btn btn-primary">View Reviews</a>
-              <a href="#" class="btn btn-secondary">Leave a Review</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="movie3.jpg" class="card-img-top" alt="Movie 3">
-            <div class="card-body">
-              <h5 class="card-title">Movie 3</h5>
-              <p class="card-text">Movie description here</p>
-              <a href="#" class="btn btn-primary">View Reviews</a>
-              <a href="#" class="btn btn-secondary">Leave a Review</a>
-            </div>
-          </div>
-        </div>
+          {% endfor %}
       </div>
     </div>
   </body>
