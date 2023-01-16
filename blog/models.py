@@ -58,17 +58,14 @@ class User(models.Model):
     name = models.CharField(max_length=30)
     email = models.EmailField()
 
-
 class Movie(models.Model):
     """
     Table model represent the site movie
     """
-    title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255, unique=True)
-    status = models.BooleanField(default=True)
-    created_on = models.DateTimeField(auto_now_add=True)
-    content = models.TextField()
-    image = models.ImageField(upload_to='movies/')
+    title = models.CharField(max_length=70)
+    release_date = models.DateField()
+    genre = models.CharField(max_length=70)
+    director = models.CharField(max_length=70)
 
 
 class Reviews(models.Model):

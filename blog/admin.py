@@ -23,13 +23,6 @@ class CommentAdmin(admin.ModelAdmin):
         queryset.update(approved=True)
 
 
-@admin.register(Movie)
-class MovieAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'slug', 'status', 'created_on')
-    search_fields = ['title', 'content']
-    list_filter = ('status', 'created_on')
-    prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('content')
 
 # BELOW TO BE DONE check this links for the django admin panel
 # https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display
