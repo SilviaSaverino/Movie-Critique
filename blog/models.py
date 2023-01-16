@@ -9,8 +9,8 @@ class Post(models.Model):
     """
     Main Table model post
     """
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    title = models.CharField(max_length=400, unique=True)
+    slug = models.SlugField(max_length=400, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts")
     featured_image = CloudinaryField('image', default='placeholder')
@@ -34,10 +34,10 @@ class Post(models.Model):
 
 class Comment(models.Model):
     """
-    Table model for comments
+    Table model for Reviews
     """
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
-                             related_name="comments")
+                             related_name="reviews")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
@@ -48,7 +48,7 @@ class Comment(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Comment {self.body} by {self.name}"
+        return f"Review {self.body} by {self.name}"
 
 
 class User(models.Model):
