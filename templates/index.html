@@ -3,8 +3,24 @@
 {% block content %}
 
 <body>
+  <div class="container about">
+    <h1>About MovieCritique:</h1>
+    <p class="text-center mt-5">Welcome to Movie Critique, the ultimate destination for movie lovers everywhere!<br>Our
+      website is designed to help you make informed decisions about what to watch, with a comprehensive search feature
+      and user-generated reviews at your fingertips.<br>Whether you're in the mood for a heart-wrenching drama or a
+      gut-busting comedy, we've got you covered.</p>
+
+    <p class="text-center mt-5">Our community of discerning film enthusiasts have carefully curated an extensive
+      collection of movie reviews to
+      help guide your viewing choices.<br> No more aimlessly scrolling through streaming platforms, wondering what to watch.
+      With Movie Critique, you'll be able to effortlessly uncover the perfect film for any mood.</p>
+
+    <p class="text-center mt-5">Join the conversation with other passionate cinephiles and leave your own reviews to
+    help guide others in their
+    movie-watching journey.<br> Say goodbye to the days of wandering in the streaming wilderness, and hello to a world of
+    cinematic delight with Movie Critique.</p>
+  </div>
   <div class="container">
-    <h1 class="text-center mt-5">Movies</h1>
     <div class="row mt-5">
 
       {% for post in post_list %}
@@ -23,14 +39,14 @@
                   <p class="author">Author: {{ post.author }}</p>
                 </div>
               </div>
-              
-                
-                <h5 class="card-title">{{ post.title }}</h5>
-                <p class="card-text">{{ post.excerpt }}</p>
-              
-                <a href="#" class="btn btn-primary">View Reviews</a>
-                <a href="#" class="btn btn-secondary">Leave a Review</a>
-              
+
+
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.excerpt }}</p>
+
+              <a href="#" class="btn btn-primary">View Reviews</a>
+              <a href="#" class="btn btn-secondary">Leave a Review</a>
+
               <hr />
               <p class="card-text text-muted h6">{{ post.created_on}} <i
                   class="far fa-hearth"></i>{{ post.number_of_likes }}</p>
