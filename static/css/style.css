@@ -86,3 +86,19 @@ footer {
 .btn-bottom {
   background-color: yellow;
 }
+
+
+/*-------------------------------------------------------------post detail page----------------------------------------*/
+
+.card-body {
+  background-color: lightblue;
+}
+
+#details {
+  background-color: rgb(28, 202, 16);
+
+}
+
+#reviews {
+  background-color: yellow;
+}

@@ -58,21 +58,22 @@ class User(models.Model):
     name = models.CharField(max_length=30)
     email = models.EmailField()
 
-class Movie(models.Model):
-    """
-    Table model represent the site movie
-    """
-    title = models.CharField(max_length=70)
-    release_date = models.DateField()
-    genre = models.CharField(max_length=70)
-    director = models.CharField(max_length=70)
+
+# class Movie(models.Model):
+#     """
+#     Table model represent the site movie
+#     """
+#     title = models.CharField(max_length=70)
+#     release_date = models.DateField()
+#     genre = models.CharField(max_length=70)
+#     director = models.CharField(max_length=70)
 
 
-class Reviews(models.Model):
-    """
-    Table model represent the site reviews
-    """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
-    rating = models.IntegerField()
-    review_content = models.TextField(max_length=255)
+# class Reviews(models.Model):
+#     """
+#     Table model represent the site reviews
+#     """
+#     user = models.ForeignKey(User, on_delete=models.CASCADE)
+#     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+#     rating = models.IntegerField()
+#     review_content = models.TextField(max_length=255)
