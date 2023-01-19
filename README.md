@@ -25,10 +25,10 @@ As a Site User I want to be able to:
 - register an account so that I can comment and like
 - select a specific movie and view its reviews so that I can decide whether or not to watch it.
 - write and submit a review for a movie so that I can share my thoughts with others.
-- edit and correct my own reviews
-- delete my reviews
-- like and unlike posts
-- leave comments on a posted reviews so that I can be involved in the conversation
+- edit and correct my own reviews so that I can ensure the accuracy of my feedbacks.
+- delete my reviews so that I can remove any inaccuracies or irrelevant content.
+- like and unlike posts so that I can indicate my appreciation or lack thereof for the post in question.
+- leave comments on a posted reviews so that I can be involved in the conversation.
 - sort reviews by rating, date, or number of likes so that I can easily find the most helpful reviews.
 
 ## Admin stories:
