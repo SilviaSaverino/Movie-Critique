@@ -62,3 +62,14 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
+
+
+class PostLike(View):
+
+    def post(self, request, slug):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.reomve(request.user)
+        else:
+            post.likes.add(request.user)
