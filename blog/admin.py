@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, User, Director  #, Movie, Reviews
+from .models import Post, Comment, User, Director, MovieGenre
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -28,6 +28,14 @@ class DirectorAdmin(SummernoteModelAdmin):
     list_display = ('director_name', 'slug')
     search_fields = ['director_name', 'content']
     prepopulated_fields = {'slug': ('director_name',)}
+    summernote_fields = ('content')
+
+
+@admin.register(MovieGenre)
+class MovieGenre(SummernoteModelAdmin):
+    list_display = ('genre_name', 'slug')
+    search_fields = ['genre_name', 'content']
+    prepopulated_fields = {'slug': ('genre_name',)}
     summernote_fields = ('content')
 
 # BELOW TO BE DONE check this links for the django admin panel
