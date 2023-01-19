@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
@@ -43,7 +44,6 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
-    
 
     class Meta:
         ordering = ["created_on"]
@@ -68,8 +68,18 @@ class Director(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
     slug = models.SlugField(max_length=400, unique=True, default="")
-    
+
     def __str__(self):
         return self.director_name
-    
-    
+
+
+class MovieGenre(models.Model):
+    """
+    Table model to represent movie genre
+    """
+    genre_name = models.CharField(max_length=50)
+    genre_image = CloudinaryField('image', default="placeholder")
+    slug = models.SlugField(max_length=500, unique=True)
+
+    def __str__(self):
+        return self.genre_name
