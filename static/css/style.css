@@ -102,3 +102,9 @@ footer {
 #reviews {
   background-color: yellow;
 }
+
+/*-------------------------------------------------------------comment-form ----------------------------------------*/
+
+#comment-form {
+  background-color: red;
+}
