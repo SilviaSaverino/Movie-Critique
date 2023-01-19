@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, User#, Movie, Reviews
+from .models import Post, Comment, User, Director  #, Movie, Reviews
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -23,6 +23,12 @@ class CommentAdmin(admin.ModelAdmin):
         queryset.update(approved=True)
 
 
+@admin.register(Director)
+class DirectorAdmin(SummernoteModelAdmin):
+    list_display = ('director_name', 'slug')
+    search_fields = ['director_name', 'content']
+    prepopulated_fields = {'slug': ('director_name',)}
+    summernote_fields = ('content')
 
 # BELOW TO BE DONE check this links for the django admin panel
 # https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display

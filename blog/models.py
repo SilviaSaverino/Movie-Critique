@@ -43,6 +43,7 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
+    
 
     class Meta:
         ordering = ["created_on"]
@@ -59,21 +60,16 @@ class User(models.Model):
     email = models.EmailField()
 
 
-# class Movie(models.Model):
-#     """
-#     Table model represent the site movie
-#     """
-#     title = models.CharField(max_length=70)
-#     release_date = models.DateField()
-#     genre = models.CharField(max_length=70)
-#     director = models.CharField(max_length=70)
-
-
-# class Reviews(models.Model):
-#     """
-#     Table model represent the site reviews
-#     """
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
-#     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
-#     rating = models.IntegerField()
-#     review_content = models.TextField(max_length=255)
+class Director(models.Model):
+    """
+    Table model to represent movie directors
+    """
+    director_name = models.CharField(max_length=50)
+    featured_image = CloudinaryField('image', default='placeholder')
+    content = models.TextField()
+    slug = models.SlugField(max_length=400, unique=True, default="")
+    
+    def __str__(self):
+        return self.director_name
+    
+    

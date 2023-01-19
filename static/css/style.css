@@ -90,7 +90,7 @@ footer {
 
 /*-------------------------------------------------------------post detail page----------------------------------------*/
 
-.card-body {
+#movie-description {
   background-color: lightblue;
 }
 
