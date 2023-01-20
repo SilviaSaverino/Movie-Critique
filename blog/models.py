@@ -59,27 +59,27 @@ class User(models.Model):
     name = models.CharField(max_length=30)
     email = models.EmailField()
 
-
-class Director(models.Model):
-    """
-    Table model to represent movie directors
-    """
-    director_name = models.CharField(max_length=50)
-    featured_image = CloudinaryField('image', default='placeholder')
-    content = models.TextField()
-    slug = models.SlugField(max_length=400, unique=True, default="")
-
-    def __str__(self):
-        return self.director_name
-
-
+#----------------------------------------------------------TO BE CHECKED WITH MENTOR
 class MovieGenre(models.Model):
     """
     Table model to represent movie genre
     """
     genre_name = models.CharField(max_length=50)
-    genre_image = CloudinaryField('image', default="placeholder")
     slug = models.SlugField(max_length=500, unique=True)
 
     def __str__(self):
         return self.genre_name
+
+
+class Director(models.Model):
+    """
+    Table model to represent movie directors
+    """
+    genre = models.ForeignKey(MovieGenre, on_delete=models.SET_NULL, null=True)
+    director_name = models.CharField(max_length=50)
+    featured_image = CloudinaryField('image', default='placeholder')
+    bio = models.TextField()
+    slug = models.SlugField(max_length=400, unique=True, default="")
+
+    def __str__(self):
+        return self.director_name

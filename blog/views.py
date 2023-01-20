@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from django.contrib import messages
+from django.shortcuts import redirect
+from .models import Post, MovieGenre, Director
 from .forms import CommentForm
 
 
@@ -64,6 +66,11 @@ class PostDetail(View):
             },
         )
 
+  #  def editReview(request, post_id):
+        
+        
+  #  def cancelReview(request, post_id):
+
 
 class PostLike(View):
 
@@ -74,5 +81,18 @@ class PostLike(View):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
-            
+
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+#----------------------------------------TO BE CHECKED WITH MENTOR
+
+def genre_list(request):
+    genres = MovieGenre.objects.all()
+    return render(request, 'genre_list.html', {'genres': genres})
+
+
+def genre_detail(request):
+    genre = get_object_or_404(MovieGenre)
+    directors = Director.object.filter(genre=genre)
+    return render(request, 'genre_detail.html', {
+        'genre': genre, 'director': director})
