@@ -1,19 +1,22 @@
 body {
-  background-color: #fefefe;
+ 
+  background-image: url(/static/mainbackground.jpg);
+  background-size: cover;
  
 }
 
 footer {
-  background-color: pink;
+  background-color: #ff8449;
 }
 
 .navbar {
-  background-color: red;
+  background-color: #ff8449;
 }
 
 /*-------------------------------------------------------------intro----------------------------------------*/
 .container.about {
-  background-color: blue;
+  color: antiquewhite;
+  background-color: rgba(44, 4, 4, 0.437)
 }
 
 
