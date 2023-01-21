@@ -55,8 +55,9 @@
         </div>
     </div>
     <div class="container">
-        <div class="row" id="reviews">
-            <div class="col-md-6 mb-4  mt-3 ">
+        <div class="row" >
+
+            <div class="col-md-6 mb-4  mt-3 " id="reviews">
                 <h3>Reviews:</h3>
                 <div>
                     {% for review in reviews %}
@@ -82,35 +83,25 @@
                 </div>
             </div>
 
-            
-                <div class="col-md-6 mb-4 mt-3" id="comment-form">
-                    <p>P to be removed -> this is the comment-form!</p>
-                    {% if commented %}
-                    <div class="alert alert-success" role="alert">
-                        Your review is awaiting approval
-                    </div>
-                    {% else %}
-                    {% if user.is_authenticated %}
-                    <h3>Leave a review:</h3>
-                    <p>Posting as: {{ user.username }}</p>
-                    <form method="post" style="margin-top: 1.3em;">
-                        {{ comment_form | crispy }}
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                    </form>
-                    {% endif %}
-                    {% endif %}
+            <div class="col-md-6 mb-4 mt-3" id="comment-form">
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your review is awaiting approval
                 </div>
-            
-
-
+                {% else %}
+                {% if user.is_authenticated %}
+                <h3>Leave a review:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
+            </div>
         </div>
     </div>
-
-    
-
-</div>
-</div>
 </div>
 
 {% endblock content %}

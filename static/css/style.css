@@ -96,24 +96,28 @@ body {
 
 /*-------------------------------------------------------------post detail page----------------------------------------*/
 
-#movie-description {
+/* #movie-description {
   background-color: lightblue;
-}
+} */
 
 #details {
   background-color: rgba(255, 255, 255, 0.601);
   border: solid 2px #ffbf49;
-  
-
 }
 
 #reviews {
-  background-color: rgba(12, 1, 1, 0.232);
-  
+  background-color: rgba(12, 1, 1, 0.232);  
 }
 
 /*-------------------------------------------------------------comment-form ----------------------------------------*/
 
 #comment-form {
-  background-color: red;
+  background-color: rgba(60, 255, 0, 0.437);
+}
+
+
+.comments {
+  border: solid 2px white;
+  background-color: #fefefe6c
+  ;
 }
