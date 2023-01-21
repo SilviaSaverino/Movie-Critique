@@ -11,7 +11,7 @@
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
 
-            <div class="col-md-8 right  top">
+            <div class="col-md-8 top">
                 <div class="card-body" id="movie-description">
                     <p class="card-text ">
                         {{ post.content | safe }}
@@ -44,69 +44,73 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="row" id="reviews">
-                    <div class="col-md-8 mb-4  mt-3 ">
-                        <h3>Reviews:</h3>
-                        <div>
-                            {% for review in reviews %}
-                            <div class="comments" style="padding: 10px;">
-                                <p class="font-weight-bold">
-                                    {{ review.name }}
-                                    <span class=" text-muted font-weight-normal">
-                                        {{ review.created_on }}
-                                    </span> wrote:
-                                </p>
-                                <div>
-                                    {{ review.body | linebreaks }}
-                                    <a href="">
-                                        <button type="submit">Edit</button>
-                                    </a>
-                                    <a href="">
-                                        <button type="submit">Delete</button>
-                                    </a>
-                                    
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-
-                    <div class="row" id="comment-form">
-                        <div class="col-md-8 mb-4 mt-3">
-                            <p>P to be removed -> this is the comment-form!</p>
-                            {% if commented %}
-                            <div class="alert alert-success" role="alert">
-                                Your review is awaiting approval
-                            </div>
-                            {% else %}
-                            {% if user.is_authenticated %}
-                            <h3>Leave a review:</h3>
-                            <p>Posting as: {{ user.username }}</p>
-                            <form method="post" style="margin-top: 1.3em;">
-                                {{ comment_form | crispy }}
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                            </form>
-                            {% endif %}
-                            {% endif %}
-                        </div>
-                    </div>
-
-
-                </div>
             </div>
-
-            <div class="d-none d-md-block col-md-4 masthead-image">
+            <div class="col-md-4 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="reviews">
+            <div class="col-md-6 mb-4  mt-3 ">
+                <h3>Reviews:</h3>
+                <div>
+                    {% for review in reviews %}
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                            {{ review.name }}
+                            <span class=" text-muted font-weight-normal">
+                                {{ review.created_on }}
+                            </span> wrote:
+                        </p>
+                        <div>
+                            {{ review.body | linebreaks }}
+                            <a href="">
+                                <button type="submit">Edit</button>
+                            </a>
+                            <a href="">
+                                <button type="submit">Delete</button>
+                            </a>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            
+                <div class="col-md-6 mb-4 mt-3" id="comment-form">
+                    <p>P to be removed -> this is the comment-form!</p>
+                    {% if commented %}
+                    <div class="alert alert-success" role="alert">
+                        Your review is awaiting approval
+                    </div>
+                    {% else %}
+                    {% if user.is_authenticated %}
+                    <h3>Leave a review:</h3>
+                    <p>Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            
+
 
         </div>
     </div>
+
+    
+
+</div>
+</div>
 </div>
 
 {% endblock content %}
