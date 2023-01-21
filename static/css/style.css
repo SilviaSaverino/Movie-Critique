@@ -117,10 +117,6 @@ body {
 }
 /*-------------------------------------------------------------reviews----------------------------------------*/
 
-/* #movie-description {
-  background-color: lightblue;
-} */
-
 #details {
   background-color: rgba(255, 255, 255, 0.601);
   border: solid 2px #ffbf49;
@@ -142,16 +138,15 @@ body {
   background-color: rgba(60, 255, 0, 0.437);
 }
 
-
 .comments {
   border: solid 2px white;
-  background-color: #fefefe6c
-  ;
+  background-color: #fefefe6c;
 }
 
 #comment-form button {
   background-color: rgb(4, 194, 4);
   color: white;
+  border: 1px solid rgb(1, 148, 26);
 }
 
 #comment-form button:hover {
