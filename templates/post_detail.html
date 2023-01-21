@@ -75,12 +75,11 @@
                         <div>
                             {{ review.body | linebreaks }}
                             <a href="">
-                                <button type="submit">Edit</button>
+                                <button type="submit" class="update"><i class="fa-regular fa-pen-to-square"></i></button>
                             </a>
                             <a href="">
-                                <button type="submit">Delete</button>
+                                <button type="submit" class="delete"><i class="fa-regular fa-trash-can"></i></button>
                             </a>
-
                         </div>
                     </div>
                     {% endfor %}

@@ -117,6 +117,12 @@ body {
   border-radius: 50%;
 }
 
+.btn-like:hover {
+  box-shadow: 2px 2px 5px rgb(246, 1, 124);  
+}
+
+
+
 .red {
   color: red;
 }
@@ -131,7 +137,7 @@ body {
   background-color: rgba(12, 1, 1, 0.232);  
 }
 
-#reviews h3, #comment-form h3 {
+#reviews h3, #comment-form {
   color: #fefefe;
   text-align: center;
 }
@@ -140,7 +146,26 @@ body {
   text-align: center;
 }
 
+.update i {
+    color: rgb(44, 0, 255);
+}
 
+.delete i {
+    color: rgba(255, 51, 0, 0.916)
+}
+
+.update, .delete {
+  background-color: rgb(233, 208, 208);
+  border-radius: 50%;
+}
+
+.update:hover {
+  box-shadow: 3px 3px 5px rgb(5, 1, 246);
+} 
+
+.delete:hover {
+  box-shadow: 3px 3px 5px rgb(246, 1, 1);
+}
 
 /*-------------------------------------------------------------comment-form ----------------------------------------*/
 
