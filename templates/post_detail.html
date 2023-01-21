@@ -57,7 +57,16 @@
                                         {{ review.created_on }}
                                     </span> wrote:
                                 </p>
-                                {{ review.body | linebreaks }}
+                                <div>
+                                    {{ review.body | linebreaks }}
+                                    <a href="">
+                                        <button type="submit">Edit</button>
+                                    </a>
+                                    <a href="">
+                                        <button type="submit">Delete</button>
+                                    </a>
+                                    
+                                </div>
                             </div>
                             {% endfor %}
                         </div>

@@ -86,4 +86,4 @@ class Director(models.Model):
     slug = models.SlugField(max_length=400, unique=True, default="")
 
     def __str__(self):
-        return self.director_name
+       return self.director_name
