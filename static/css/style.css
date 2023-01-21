@@ -107,6 +107,11 @@ body {
   padding: 10px;
 }
 
+#liked-counted .btn-like {
+  background-color: white;
+  border-radius: 50%;
+}
+
 .red {
   color: red;
 }
