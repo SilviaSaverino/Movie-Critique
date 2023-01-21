@@ -93,10 +93,10 @@ body {
   background-color: yellow;
 }
 /*-------------------------------------------------------------post detail page----------------------------------------*/
-/* #movie-description {
-  background-color: #fefefe6c
+.post-title, .post-subtitle {
+  text-align: center;
+}
 
-} */
 .post-img {
   padding: 10px;
 }
@@ -128,16 +128,6 @@ body {
   text-align: center;
 }
 
-#comment-form button {
-  background-color: rgb(4, 194, 4);
-  color: white;
-}
-
-#comment-form button:hover {
-  color: black;
-  background-color: rgb(65, 233, 53);
-}
-
 
 /*-------------------------------------------------------------comment-form ----------------------------------------*/
 
@@ -150,4 +140,14 @@ body {
   border: solid 2px white;
   background-color: #fefefe6c
   ;
+}
+
+#comment-form button {
+  background-color: rgb(4, 194, 4);
+  color: white;
+}
+
+#comment-form button:hover {
+  color: black;
+  background-color: rgb(65, 233, 53);
 }
