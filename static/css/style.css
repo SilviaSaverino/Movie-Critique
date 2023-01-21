@@ -92,9 +92,23 @@ body {
 .btn-bottom {
   background-color: yellow;
 }
-
-
 /*-------------------------------------------------------------post detail page----------------------------------------*/
+/* #movie-description {
+  background-color: #fefefe6c
+
+} */
+.post-img {
+  padding: 10px;
+}
+
+#liked-counted {
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+}
+
+
+/*-------------------------------------------------------------reviews----------------------------------------*/
 
 /* #movie-description {
   background-color: lightblue;
@@ -108,6 +122,9 @@ body {
 #reviews {
   background-color: rgba(12, 1, 1, 0.232);  
 }
+
+
+
 
 /*-------------------------------------------------------------comment-form ----------------------------------------*/
 
