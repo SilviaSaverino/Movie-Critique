@@ -60,11 +60,14 @@ class User(models.Model):
     email = models.EmailField()
 
 #----------------------------------------------------------TO BE CHECKED WITH MENTOR
+
+
 class MovieGenre(models.Model):
     """
     Table model to represent movie genre
     """
-    genre_name = models.CharField(max_length=50)
+   # post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    genre_name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=500, unique=True)
 
     def __str__(self):
@@ -76,7 +79,8 @@ class Director(models.Model):
     Table model to represent movie directors
     """
     genre = models.ForeignKey(MovieGenre, on_delete=models.SET_NULL, null=True)
-    director_name = models.CharField(max_length=50)
+    director_name = models.CharField(max_length=50, unique=True)
+    slug = models.SlugField(max_length=500, unique=True)
     featured_image = CloudinaryField('image', default='placeholder')
     bio = models.TextField()
     slug = models.SlugField(max_length=400, unique=True, default="")

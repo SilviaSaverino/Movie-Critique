@@ -86,13 +86,24 @@ class PostLike(View):
 
 #----------------------------------------TO BE CHECKED WITH MENTOR
 
-def genre_list(request):
+
+def MovieGenre_list(request):
     genres = MovieGenre.objects.all()
-    return render(request, 'genre_list.html', {'genres': genres})
+    return render(request, 
+                  'moviegenre_list.html', 
+                  {
+                      'genres': genres
+                      }
+                  )
 
 
-def genre_detail(request):
+def MovieGenre_detail(request):
     genre = get_object_or_404(MovieGenre)
-    directors = Director.object.filter(genre=genre)
-    return render(request, 'genre_detail.html', {
-        'genre': genre, 'director': director})
+    directors = Director.objects.filter(genre=genre)
+    return render(request, 
+                  'moviegenre_detail.html', 
+                  {
+                    'genre': genre, 
+                    'directors': directors
+                },
+            )

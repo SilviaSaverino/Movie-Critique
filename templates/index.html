@@ -46,7 +46,7 @@
             </div>
             <div class="btn-bottom">
               <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary">View Reviews</a>
-              <a href="#" class="btn btn-secondary">Directors&Genre</a>
+              <a href="{% url 'moviegenre_detail' %}" class="btn btn-secondary">Directors&Genre</a>
               <hr/>
               <p class="card-text text-muted h6">{{ post.created_on}} <i class="fa-regular fa-heart"></i> {{ post.number_of_likes }}</p>
             </div>

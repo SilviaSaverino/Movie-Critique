@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ moviegenre.name }}</h1>
+<h2>Director</h2>
+<ul>
+    {% for director in directors %}
+    <li>
+        <h2>{{ director.name }}</h2>
+        <h3> {{ movie.genres }} </h3>
+        <p>{{ director.bio }}</p>
+        
+        
+        <div class="d-none d-md-block col-md-4 masthead-image">
+            {% if "placeholder" in director.featured_image.url %}
+            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+            {% else %}
+            <img src=" {{ director.featured_image.url }}" width="100%">
+            {% endif %}
+        </div>
+        
+    </li>
+    {% endfor %}
+</ul>
+{% endblock%}
