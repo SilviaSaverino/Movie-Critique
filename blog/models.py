@@ -66,7 +66,7 @@ class MovieGenre(models.Model):
     """
     Table model to represent movie genre
     """
-   # post = models.ForeignKey(Post, on_delete=models.CASCADE)
+   # post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name ="genre")
     genre_name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=500, unique=True)
 
@@ -78,7 +78,7 @@ class Director(models.Model):
     """
     Table model to represent movie directors
     """
-    genre = models.ForeignKey(MovieGenre, on_delete=models.SET_NULL, null=True)
+    genre = models.ForeignKey(MovieGenre, on_delete=models.SET_NULL, null=True, related_name="director")
     director_name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=500, unique=True)
     featured_image = CloudinaryField('image', default='placeholder')
