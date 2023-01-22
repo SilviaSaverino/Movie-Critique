@@ -7,27 +7,25 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container login">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
       <h3>{% trans "Login" %}</h3>
 
 
-      <p>{% blocktrans %}Welcome back to Movie Critique. <br>
-        To leave a review or like a post, please log in.</p>
-
+      <p>{% blocktrans %}Welcome back to Movie Critique.</p>
+      <hr>
       <p>
         First time here and need an account? Then
-        <a href="{{ signup_url }}">Sign up</a> first.{% endblocktrans %} or continue with your login</p>
+        <a href="{{ signup_url }}">Sign up</a> first.{% endblocktrans %}</p>
+      <p> To leave a review or like a post, please log in.</p>
+
     </div>
   </div>
-</div>
-
-<div class="container">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
 
-      <form class="login" method="POST" action="{% url 'account_login' %}">
+      <form class="login-form" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
