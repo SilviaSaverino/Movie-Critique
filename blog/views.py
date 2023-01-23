@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.shortcuts import redirect
-from .models import Post, MovieGenre, Director
+from .models import Post, MovieGenre, Director, Comment
 from .forms import CommentForm
 
 
@@ -79,6 +79,22 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+def edit_review(request, review_id):
+    review = get_object_or_404(Comment, id=review_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your edited review is awaiting approval")
+            return redirect('post_detail', review.post.slug)
+    else:
+        form = CommentForm(instance=review)
+    context = {'form': form, 'review': review}
+    return render(request, 'edit_review.html', context)            
+
+
 
 #----------------------------------------TO BE CHECKED WITH MENTOR
 
