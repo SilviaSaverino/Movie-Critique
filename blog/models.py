@@ -52,13 +52,6 @@ class Comment(models.Model):
         return f"Review {self.body} by {self.name}"
 
 
-class User(models.Model):
-    """
-    Table model to represent the site user
-    """
-    name = models.CharField(max_length=30)
-    email = models.EmailField()
-
 #----------------------------------------------------------TO BE CHECKED WITH MENTOR
 
 
