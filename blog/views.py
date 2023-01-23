@@ -87,11 +87,11 @@ def edit_review(request, review_id):
         form = CommentForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
-            messages.success(request, "Your edited review is awaiting approval")
+            messages.warning(request, "Your edited review is awaiting approval")
             return redirect('post_detail', review.post.slug)
     else:
         form = CommentForm(instance=review)
-    context = {'form': form, 'review': review}
+    context = {'form': form, 'review': review, 'post': review.post}
     return render(request, 'edit_review.html', context)            
 
 

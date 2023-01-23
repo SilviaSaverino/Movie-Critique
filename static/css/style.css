@@ -211,3 +211,9 @@ body {
   margin-bottom: 5px;
 }
 
+/*-------------------------------------------------------------edit review page----------------------------------------*/
+.edit {
+  background-color: rgba(255, 255, 255, 0.697); 
+  text-align: center;
+}
+
