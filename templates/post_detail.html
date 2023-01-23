@@ -82,8 +82,7 @@
                             {% if user.is_authenticated %}
 
                             {% if review.author == user %}
-                            <!-- <a href="{% url 'edit_review' review.id %}">Edit Review</a> -->
-
+                            
                                 <button type="submit" class="update">
                                     <a href="{% url 'edit_review' review.id %}">
                                         <i class="fa-regular fa-pen-to-square"></i>
