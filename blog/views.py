@@ -95,6 +95,11 @@ def edit_review(request, review_id):
     return render(request, 'edit_review.html', context)            
 
 
+def delete_review(request, review_id):
+    review = get_object_or_404(Comment, id=review_id)
+    review.delete()
+    messages.warning(request, "Deleting your review")
+    return redirect('post_detail', slug=review.post.slug)
 
 #----------------------------------------TO BE CHECKED WITH MENTOR
 

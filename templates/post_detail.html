@@ -13,7 +13,8 @@
             <hr>
             <div class="col-md-4 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="post-img" width="100%">
+                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="post-img"
+                    width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" class="post-img" width="100%">
                 {% endif %}
@@ -23,7 +24,7 @@
                     <p class="card-text">
                         {{ post.content | safe }}
                     </p>
-                
+
                     <div class="row" id="liked-counted">
                         <div class="col-1">
                             <strong>
@@ -53,11 +54,11 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <div class="container">
-        <div class="row" >
+        <div class="row">
 
             <div class="col-md-6 mb-4 mt-3" id="reviews">
                 <h3>Reviews:</h3>
@@ -66,7 +67,7 @@
                     {% for review in reviews %}
                     <div class="comments" style="padding: 10px;">
                         <p class="font-weight-bold">
-                            {{ review.name }} 
+                            {{ review.name }}
                             review id: {{ review.id }}
                             current user: {{ user.id }}
                             review author : {{ review.author}}
@@ -77,23 +78,32 @@
                         <hr>
                         <div>
                             {{ review.body | linebreaks }}
-                             
-                            {% if user.is_authenticated %}
-                                
-                                {% if review.author == user %}
-                                <a href="{% url 'edit_review' review.id %}">Edit Review</a>
 
-                                        <button type="submit" class="update"><i class="fa-regular fa-pen-to-square"></i></button>
+                            {% if user.is_authenticated %}
+
+                            {% if review.author == user %}
+                            <!-- <a href="{% url 'edit_review' review.id %}">Edit Review</a> -->
+
+                                <button type="submit" class="update">
+                                    <a href="{% url 'edit_review' review.id %}">
+                                        <i class="fa-regular fa-pen-to-square"></i>
                                     </a>
-                                    <a href="">
-                                        <button type="submit" class="delete"><i class="fa-regular fa-trash-can"></i></button>
-                                    </a>                              
-                                {% endif %}
-                                       
+                                </button>
+
+                            
+                                <button type="submit" class="delete">
+                                    <a href="{% url 'delete_review' review.id %}" onclick="return confirm('Are you sure you want to delete this review?');">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </a>
+                                </button>
+                                
+                            
+                            {% endif %}
+
                             {% endif %}
 
 
-                            
+
                         </div>
                     </div>
                     {% endfor %}
