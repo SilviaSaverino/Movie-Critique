@@ -49,6 +49,7 @@ class PostDetail(View):
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
+            comment.author = request.user
             comment.post = post
             comment.save()
         else:
@@ -62,16 +63,10 @@ class PostDetail(View):
                 "reviews": reviews,
                 "commented": True,
                 "liked": liked,
-                "director": director,
+                
                 "comment_form": CommentForm()
             },
         )
-
-  #  def editReview(request, post_id):
-        
-        
-  #  def cancelReview(request, post_id):
-
 
 class PostLike(View):
 
@@ -90,7 +85,7 @@ class PostLike(View):
 
 def MovieGenre_list(request):
     genres = MovieGenre.objects.all()
-    return render(request, 
+    return render(request,
                   'moviegenre_list.html',
                   {
                       'genres': genres
@@ -101,7 +96,7 @@ def MovieGenre_list(request):
 def MovieGenre_detail(request):
     genre = get_object_or_404(MovieGenre)
     directors = Director.objects.filter(genre=genre)
-    return render(request, 
+    return render(request,
                   'moviegenre_detail.html',
                   {
                     'genre': genre,

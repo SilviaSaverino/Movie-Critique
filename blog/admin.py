@@ -37,18 +37,3 @@ class MovieGenre(SummernoteModelAdmin):
     search_fields = ['genre_name', 'content']
     prepopulated_fields = {'slug': ('genre_name',)}
     summernote_fields = ('content')
-
-# BELOW TO BE DONE check this links for the django admin panel
-# https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.list_display
-# https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.search_fields
-# DO NOT FORGET TO MIGRATE WHATEVER YOU ADD HERE -> python3 manage.py migrate
-
-# @admin.register(User)
-# class registerUser:
-
-# @admin.register(Movie)
-# class registerMovie:
-    
-# @admin.register(Reviews)
-# class registerReviews:
-    

@@ -66,7 +66,10 @@
                     {% for review in reviews %}
                     <div class="comments" style="padding: 10px;">
                         <p class="font-weight-bold">
-                            {{ review.name }}
+                            {{ review.name }} 
+                            review id: {{ review.id }}
+                            current user: {{ user.id }}
+                            review author : {{ review.author}}
                             <span class=" text-muted font-weight-normal">
                                 {{ review.created_on }}
                             </span> wrote:
@@ -74,12 +77,22 @@
                         <hr>
                         <div>
                             {{ review.body | linebreaks }}
-                            <a href="">
-                                <button type="submit" class="update"><i class="fa-regular fa-pen-to-square"></i></button>
-                            </a>
-                            <a href="">
-                                <button type="submit" class="delete"><i class="fa-regular fa-trash-can"></i></button>
-                            </a>
+                             
+                            {% if user.is_authenticated %}
+                                
+                                {% if review.author == user %}
+                                    <a href="">
+                                        <button type="submit" class="update"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    </a>
+                                    <a href="">
+                                        <button type="submit" class="delete"><i class="fa-regular fa-trash-can"></i></button>
+                                    </a>                              
+                                {% endif %}
+                                       
+                            {% endif %}
+
+
+                            
                         </div>
                     </div>
                     {% endfor %}
