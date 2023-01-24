@@ -77,7 +77,7 @@ class PostDetail(View):
 
 class PostLike(View):
     """
-     Allows the user to like or unlike a specific post 
+     Allows the user to like or unlike a specific post
      by handling the post request.
     """
     def post(self, request, slug):
@@ -101,12 +101,13 @@ def edit_review(request, review_id):
         form = CommentForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
-            messages.warning(request, "Your edited review is awaiting approval")
+            messages.warning(
+                request, "Your edited review is awaiting approval")
             return redirect('post_detail', review.post.slug)
     else:
         form = CommentForm(instance=review)
     context = {'form': form, 'review': review, 'post': review.post}
-    return render(request, 'edit_review.html', context)            
+    return render(request, 'edit_review.html', context)
 
 
 def delete_review(request, review_id):
@@ -139,9 +140,11 @@ def MovieGenre_detail(request):
     genre = get_object_or_404(MovieGenre)
     directors = Director.objects.filter(genre=genre)
     return render(request,
-                  'moviegenre_detail.html',
+                  'moviegenre_detail.html', 
                   {
                     'genre': genre,
-                    'director': director
+                    'directors': directors
                   },
+                  
+                  
                 )

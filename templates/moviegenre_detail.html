@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ moviegenre.name }}</h1>
+<h1>{{ genre.genre_name }}</h1>
 <h2>Director</h2>
 <ul>
     {% for director in directors %}
     <li>
         <h2>{{ director.director_name}}</h2>
-        <h3> {{ movie.genres }} </h3>
+        <h3> {{ genre.genre_name }} </h3>
         <p>{{ director.bio }}</p>
         
         
