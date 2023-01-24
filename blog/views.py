@@ -122,6 +122,8 @@ def delete_review(request, review_id):
 
 
 #----------------------------------------TO BE CHECKED WITH MENTOR
+
+
 def MovieGenre_list(request):
     """ 
     """
@@ -140,11 +142,10 @@ def MovieGenre_detail(request):
     genre = get_object_or_404(MovieGenre)
     directors = Director.objects.filter(genre=genre)
     return render(request,
-                  'moviegenre_detail.html', 
+                  'director_detail.html', 
                   {
                     'genre': genre,
                     'directors': directors
                   },
-                  
-                  
-                )
+                 )  
+

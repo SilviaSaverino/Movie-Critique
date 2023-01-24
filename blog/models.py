@@ -60,7 +60,6 @@ class MovieGenre(models.Model):
     """
     Table model to represent movie genre
     """
-   # post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name ="genre")
     genre_name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=500, unique=True)
 
@@ -77,7 +76,7 @@ class Director(models.Model):
     slug = models.SlugField(max_length=500, unique=True)
     featured_image = CloudinaryField('image', default='placeholder')
     bio = models.TextField()
-    # slug = models.SlugField(max_length=400, unique=True, default="")
+    
 
     def __str__(self):
        return self.director_name

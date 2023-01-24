@@ -4,7 +4,7 @@
 <h1>Genres</h1>
 <ul>
     {% for genre in genres %}
-    <li><a href="{% url 'moviegenre_detail'%}">{{ genre.genre_name }}</a></li>
+    <li><a href="{% url 'director_detail' %}">{{ genre.genre_name }}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}
