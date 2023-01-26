@@ -125,7 +125,8 @@ def delete_review(request, review_id):
 
 
 def MovieGenre_list(request):
-    """ 
+    """
+    Show a list of all movie genres
     """
     genres = MovieGenre.objects.all()
     return render(request,
@@ -135,9 +136,10 @@ def MovieGenre_list(request):
                       },
                   )
 
-
 def MovieGenre_detail(request):
-    """ 
+    """
+    Show details of a specific movie genre and 
+    movie directors
     """
     genre = get_object_or_404(MovieGenre)
     directors = Director.objects.filter(genre=genre)
@@ -147,5 +149,4 @@ def MovieGenre_detail(request):
                     'genre': genre,
                     'directors': directors
                   },
-                 )  
-
+                )
