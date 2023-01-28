@@ -195,7 +195,8 @@ body {
 /*-------------------------------------------------------------logout/in & signup page----------------------------------------*/
 .logout,
 .login,
-.register {
+.register,
+/* .genrelist { */ {
   background-color: rgba(255, 255, 255, 0.697);
   text-align: center;
   position: absolute;
@@ -221,3 +222,6 @@ body {
   width: 90%;
 }
 
+/*-------------------------------------------------------------moviegenre_list----------------------------------------*/
+
+ 

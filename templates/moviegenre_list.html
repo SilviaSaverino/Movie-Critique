@@ -1,10 +1,50 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Genres</h1>
-<ul>
-    {% for genre in genres %}
-    <li><a href="{% url 'director_detail' genre.id %}">{{ genre.genre_name }}</a></li>
-    {% endfor %}
-</ul>
+<div class="container genrelist">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h1>Genres</h1>
+            <div class="list-group">
+                {% for genre in genres %}
+                <a href="{% url 'director_detail' genre.id %}" class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{ genre.genre_name }}</h5>
+                    <small>Age suggestion here</small>
+                  </div>
+                  <p class="mb-1">description here</p>
+                  <small>link to form to request a genre here</small>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container genrelist">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h1>Genres</h1>
+            <ul>
+                {% for genre in genres %}
+                <li><a href="{% url 'director_detail' genre.id %}">{{ genre.genre_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{ genre.genre_name }}</h5>
+        <small>Age suggestion here</small>
+      </div>
+      <p class="mb-1">Some placeholder content in a paragraph.</p>
+      <small>And some small print.</small>
+    </a>
+    
+  </div> -->
+
+
 {% endblock %}
