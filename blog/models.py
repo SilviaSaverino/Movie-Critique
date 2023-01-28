@@ -62,8 +62,8 @@ class MovieGenre(models.Model):
     """
     genre_name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=500, unique=True)
-    age_rating = models.IntegerField()
-    description = models.TextField()
+    age_rating = models.CharField(max_length=3, null=True)
+    description = models.TextField(default='')
 
     def __str__(self):
         return self.genre_name

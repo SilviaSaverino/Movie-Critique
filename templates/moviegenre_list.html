@@ -10,9 +10,9 @@
                 <a href="{% url 'director_detail' genre.id %}" class="list-group-item list-group-item-action">
                   <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">{{ genre.genre_name }}</h5>
-                    <small>Age suggestion here</small>
+                    <small>{{ genre.age_rating }}</small>
                   </div>
-                  <p class="mb-1">description here</p>
+                  <p class="mb-1">{{ genre.description }}</p>
                   <small>link to form to request a genre here</small>
                 </a>
                 {% endfor %}
