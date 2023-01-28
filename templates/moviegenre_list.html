@@ -4,16 +4,22 @@
 <div class="container genrelist">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h1>Genres</h1>
+            <h1>Movie genres</h1>
+            <p>Discovering various movie genres enables you to pick films that align with your tastes, and also gives
+                you a more profound appreciation for the art and technique of filmmaking. <br> With options ranging from
+                adrenaline-fueled action flicks, heartwarming romantic tales, to nail-biting thrillers, there is a genre
+                for every film lover. </p>
+            <p>Can't find what you want? Submit a request for a genre through our form!</p>
+        
             <div class="list-group">
                 {% for genre in genres %}
                 <a href="{% url 'director_detail' genre.id %}" class="list-group-item list-group-item-action">
-                  <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{ genre.genre_name }}</h5>
-                    <small>{{ genre.age_rating }}</small>
-                  </div>
-                  <p class="mb-1">{{ genre.description }}</p>
-                  <small>link to form to request a genre here</small>
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{ genre.genre_name }}</h5>
+                        <small>{{ genre.age_rating }}</small>
+                    </div>
+                    <p class="mb-1">{{ genre.description }}</p>
+                    <small>link to form to request a genre here</small>
                 </a>
                 {% endfor %}
             </div>
