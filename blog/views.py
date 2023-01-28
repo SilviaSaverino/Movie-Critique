@@ -136,12 +136,12 @@ def MovieGenre_list(request):
                       },
                   )
 
-def MovieGenre_detail(request):
+def MovieGenre_detail(request, genres_id):
     """
     Show details of a specific movie genre and 
     movie directors
     """
-    genre = get_object_or_404(MovieGenre)
+    genre = get_object_or_404(MovieGenre, id=genres_id)
     directors = Director.objects.filter(genre=genre)
     return render(request,
                   'director_detail.html', 

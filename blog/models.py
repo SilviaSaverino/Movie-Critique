@@ -71,7 +71,8 @@ class Director(models.Model):
     """
     Table model to represent movie directors
     """
-    genre = models.ForeignKey(MovieGenre, on_delete=models.SET_NULL, null=True, related_name="director")
+    genre = models.ManyToManyField(
+        MovieGenre, blank=True, related_name="director")
     director_name = models.CharField(max_length=50, unique=True)
     slug = models.SlugField(max_length=500, unique=True)
     featured_image = CloudinaryField('image', default='placeholder')
