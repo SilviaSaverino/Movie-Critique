@@ -160,6 +160,7 @@ def MovieGenreCreate(request):
     if request.method == 'POST':
         form = MovieGenreForm(request.POST)
         if form.is_valid():
+            movie_genre = form.cleaned_data['genre_name']
             form.save()
             return redirect('moviegenre_list')
     else:

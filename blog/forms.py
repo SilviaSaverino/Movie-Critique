@@ -14,7 +14,7 @@ class MovieGenreForm(forms.ModelForm):
         fields = ['genre_name']
         
     def clean_genre_name(self):
-        genre_name = self.clean_data.get('genre_name')
+        genre_name = self.cleaned_data.get('genre_name')
         if MovieGenre.objects.filter(genre_name=genre_name).exists():
             raise forms.ValidationError("A genre with this name already exists.")
         return genre_name

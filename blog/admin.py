@@ -37,3 +37,5 @@ class MovieGenre(SummernoteModelAdmin):
     search_fields = ['genre_name', 'content']
     prepopulated_fields = {'slug': ('genre_name',)}
     summernote_fields = ('content')
+
+    
