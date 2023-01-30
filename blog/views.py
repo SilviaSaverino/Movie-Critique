@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.shortcuts import redirect
 from .models import Post, MovieGenre, Director, Comment
-from .forms import CommentForm
+from .forms import CommentForm, MovieGenreForm
 
 
 class PostList(generic.ListView):
@@ -136,6 +136,7 @@ def MovieGenre_list(request):
                       },
                   )
 
+
 def MovieGenre_detail(request, genres_id):
     """
     Show details of a specific movie genre and 
@@ -150,3 +151,17 @@ def MovieGenre_detail(request, genres_id):
                     'directors': directors
                   },
                 )
+    
+
+def MovieGenreCreate(request):
+    """
+    Handle creation of a movie genre
+    """
+    if request.method == 'POST':
+        form = MovieGenreForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('moviegenre_list')
+        else:
+            form = MovieGenreForm()
+        return render(request, 'moviegenre_form.html',{'form': form})
