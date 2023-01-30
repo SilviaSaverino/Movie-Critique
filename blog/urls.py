@@ -5,6 +5,7 @@ from .views import delete_review
 urlpatterns = [
     path("", views.PostList.as_view(), name="home"),
     #----------------------------------------to be checked with mentor
+    path('genre/create/', views.MovieGenreCreate, name='moviegenre_form'),
     path('review/<int:review_id>/edit/', views.edit_review, name='edit_review'),
     path('delete/<int:review_id>/', delete_review, name='delete_review'),
     path('genres/', views.MovieGenre_list, name='moviegenre_list'),
