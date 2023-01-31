@@ -140,7 +140,7 @@ body {
 
 #reviews h3,
 #comment-form {
-  color: #fefefe;
+  color: antiquewhite;
   text-align: center;
 }
 
@@ -262,4 +262,19 @@ body {
   display: inline-grid;
   justify-content:space-evenly;
   margin-bottom: 5px;
+}
+
+/*------------------------------------------------------------ director detail----------------------------------------*/
+
+.director {
+  background-color: rgba(44, 4, 4, 0.437);
+  color: antiquewhite;
+  text-align: center;
+}
+
+.director-detail, 
+.single-director {
+  background-color: antiquewhite;
+  margin: 5px auto;
+  list-style-type: none;
 }

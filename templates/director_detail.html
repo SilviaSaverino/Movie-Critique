@@ -1,23 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Directors of {{ genre.genre_name }} genre</h2>
-<p></p>
-<p>Can't find the director you were looking for? <br> Submit a request through our <a href="{% url 'director_request_form' %}">form!</a> </p>
-<ul>
-    {% for director in directors %}
-    <li>
-        <h2>{{ director.director_name}}</h2>
-        <div class="d-none d-md-block col-md-4 masthead-image">
-            {% if "placeholder" in director.featured_image.url %}
-            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
-            {% else %}
-            <img src=" {{ director.featured_image.url }}" width="100%">
-            {% endif %}
+<div class="container director">
+    <div class="row">
+        <div class="col-12">
+            <h2>Directors for genre: {{ genre.genre_name }}</h2>
+            <hr>
+            <p>Can't find the director you were looking for?</p>
+            <p>Submit a request through our <a href="{% url 'director_request_form' %}">form!</a> </p>
         </div>
-        <hr>
-        <p>{{ director.bio }}</p>
-    </li>
-    {% endfor %}
-</ul>
+    </div>
+</div>
+
+
+{% for director in directors %}
+<div class="container director-detail">
+            <div class="row single-director">
+                <div class="col-4">
+                    {% if "placeholder" in director.featured_image.url %}
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                    {% else %}
+                    <img src=" {{ director.featured_image.url }}" width="100%">
+                    {% endif %}
+                </div>
+                <div class="col-8">
+                    <h2>{{ director.director_name}}</h2>
+                    <hr>
+                    <p>{{ director.bio }}</p>
+                </div>
+            </div>
+      </div>
+{% endfor %}
+
+
 {% endblock%}
