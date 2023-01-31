@@ -89,9 +89,10 @@ class UserRequest(models.Model):
     """
     Table model to represent a user request for a new director
     """
-    director_name = models.CharField(max_length=50, unique=True)
-    request = models.TextField()
-    status = models.CharField(max_length=10, default='Pending')
-    
+    director_name = models.CharField(max_length=50)
+    genre = models.ManyToManyField(MovieGenre, blank=True)
+    bio = models.TextField()
+    request_status = models.BooleanField(default=False)
+
     def __str__(self):
         return self.director_name

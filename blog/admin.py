@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, User, Director, MovieGenre
+from .models import Post, Comment, User, Director, MovieGenre, UserRequest
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -38,4 +38,10 @@ class MovieGenre(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('genre_name',)}
     summernote_fields = ('content')
 
-    
+@admin.register(UserRequest)
+class UserRequestAdmin(admin.ModelAdmin):
+    list_display = ('director_name',)
+    list_filter = ('request_status',)
+    search_fields = ['directorn_name']
+    actions = ['approve_director_request']
+        
