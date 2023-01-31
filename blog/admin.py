@@ -38,10 +38,11 @@ class MovieGenre(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('genre_name',)}
     summernote_fields = ('content')
 
+
 @admin.register(UserRequest)
 class UserRequestAdmin(admin.ModelAdmin):
     list_display = ('director_name',)
     list_filter = ('request_status',)
-    search_fields = ['directorn_name']
+    search_fields = ['director_name']
     actions = ['approve_director_request']
         

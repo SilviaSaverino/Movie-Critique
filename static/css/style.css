@@ -235,3 +235,10 @@ body {
 .genrelist p {
   color: white;
 }
+
+.scrollable-list {
+  height: 300px;
+  overflow: auto;
+}
+
+

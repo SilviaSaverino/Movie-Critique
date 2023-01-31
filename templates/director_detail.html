@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ genre.genre_name }}</h1>
-<h2>Director</h2>
+<h2>Directors of {{ genre.genre_name }} genre</h2>
+<p></p>
+<p>Can't find the director you were looking for? <br> Submit a request through our <a href="{% url 'director_request_form' %}">form!</a> </p>
 <ul>
     {% for director in directors %}
     <li>
         <h2>{{ director.director_name}}</h2>
-        <h3> {{ genre.genre_name }} </h3>
         <p>{{ director.bio }}</p>
         
         
