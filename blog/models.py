@@ -83,3 +83,15 @@ class Director(models.Model):
 
     def __str__(self):
        return self.director_name
+
+
+class UserRequest(models.Model):
+    """
+    Table model to represent a user request for a new director
+    """
+    director_name = models.CharField(max_length=50, unique=True)
+    request = models.TextField()
+    status = models.CharField(max_length=10, default='Pending')
+    
+    def __str__(self):
+        return self.director_name
