@@ -1,4 +1,4 @@
-from .models import Comment, MovieGenre
+from .models import Comment, UserRequest  # MovieGenre
 from django import forms
 
 
