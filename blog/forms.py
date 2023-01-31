@@ -19,7 +19,7 @@ class CommentForm(forms.ModelForm):
 #             raise forms.ValidationError("A genre with this name already exists.")
 #         return genre_name
 
-class DirectorRequestForm(forms.ModelForm):
+class UserRequestForm(forms.ModelForm):
     class Meta:
         model = UserRequest
         fields = ['director_name', 'genre', 'bio']

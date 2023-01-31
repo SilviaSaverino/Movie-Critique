@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.shortcuts import redirect
 from .models import Post, MovieGenre, Director, Comment
-from .forms import CommentForm, MovieGenreForm
+from .forms import CommentForm, UserRequestForm   #MovieGenreForm
 
 
 class PostList(generic.ListView):
@@ -153,16 +153,30 @@ def MovieGenre_detail(request, genres_id):
                 )
     
 
-def MovieGenreCreate(request):
+# def MovieGenreCreate(request):
+#     """
+#     Handle creation of a movie genre
+#     """
+#     if request.method == 'POST':
+#         form = MovieGenreForm(request.POST)
+#         if form.is_valid():
+#             movie_genre = form.cleaned_data['genre_name']
+#             form.save()
+#             return redirect('moviegenre_list')
+#     else:
+#         form = MovieGenreForm()
+#     return render(request, 'moviegenre_form.html', {'form': form})
+
+def UserRequestCreate(request):
     """
-    Handle creation of a movie genre
+    Handle creation of a director request
     """
     if request.method == 'POST':
-        form = MovieGenreForm(request.POST)
+        form = UserRequestForm(request.POST, request.FILES)
         if form.is_valid():
-            movie_genre = form.cleaned_data['genre_name']
             form.save()
+            messages.success(request, 'Director request submitted successfully')
             return redirect('moviegenre_list')
     else:
-        form = MovieGenreForm()
-    return render(request, 'moviegenre_form.html', {'form': form})
+        form = UserRequestForm()
+    return render(request, 'director_request_form.html', {'form': form})
