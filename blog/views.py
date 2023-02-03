@@ -102,7 +102,7 @@ def edit_review(request, review_id):
         if form.is_valid():
             form.save()
             messages.warning(
-                request, "Your edited review is awaiting approval")
+                request, "Your edited review is ready")
             return redirect('post_detail', review.post.slug)
     else:
         form = CommentForm(instance=review)
@@ -121,7 +121,7 @@ def delete_review(request, review_id):
     return redirect('post_detail', slug=review.post.slug)
 
 
-#----------------------------------------TO BE CHECKED WITH MENTOR
+#----------------------------------------MovieGenre
 
 
 def MovieGenre_list(request):
@@ -152,20 +152,7 @@ def MovieGenre_detail(request, genres_id):
                   },
                 )
     
-
-# def MovieGenreCreate(request):
-#     """
-#     Handle creation of a movie genre
-#     """
-#     if request.method == 'POST':
-#         form = MovieGenreForm(request.POST)
-#         if form.is_valid():
-#             movie_genre = form.cleaned_data['genre_name']
-#             form.save()
-#             return redirect('moviegenre_list')
-#     else:
-#         form = MovieGenreForm()
-#     return render(request, 'moviegenre_form.html', {'form': form})
+#----------------------------------------UserRequest
 
 def UserRequestCreate(request):
     """
@@ -180,3 +167,29 @@ def UserRequestCreate(request):
     else:
         form = UserRequestForm()
     return render(request, 'director_request_form.html', {'form': form})
+
+
+def UserRequestUpdate(request, request_id):
+    """
+    Handle editing of a director request
+    """
+    user_request = get_object_or_404(UserRequest, id=request_id)
+    if request.method == 'POST':
+        form = UserRequestForm(request.POST, instance=user_request)
+        if form.is_valid():
+            form.save()
+            messages.warning(
+                request, "Your edited request is ready")
+            return redirect('your_request')
+    else:
+        form = UserRequestForm(instance=user_request)
+    return render(request, 'director_request_form.html', {'form': form})
+ 
+ 
+def UserRequestDelete(request, request_id):
+    """
+    Handle deletion of a user request
+    """
+    user_request = get_object_or_404(UserRequest, id=request_id)
+    user_request.delete()
+    return redirect('director_request_form.html')
