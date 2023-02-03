@@ -41,12 +41,17 @@
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'director_request_form' %}">Request</a>
                     </li>
+                    
 
                     {% if user.is_authenticated %}
                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Your Request</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
-                    <!--add a review link here-->
+                    
+                    
 
                     {% else %}
                     <li class="nav-item">
