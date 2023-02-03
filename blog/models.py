@@ -91,7 +91,7 @@ class UserRequest(models.Model):
     """
     director_name = models.CharField(max_length=50)
     genre = models.ManyToManyField(MovieGenre, blank=True)
-    bio = models.TextField()
+    request = models.TextField()
     request_status = models.BooleanField(default=False)
 
     def __str__(self):
