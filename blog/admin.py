@@ -42,7 +42,7 @@ class MovieGenre(SummernoteModelAdmin):
 @admin.register(UserRequest)
 class UserRequestAdmin(admin.ModelAdmin):
     list_display = ('director_name',)
-    list_filter = ('request_status',)
+    list_filter = ('approved',)
     search_fields = ['director_name']
     actions = ['approve_director_request']
         
