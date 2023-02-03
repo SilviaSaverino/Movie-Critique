@@ -1,0 +1,34 @@
+<!-- store and display user requests here -->
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Your Requests</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Director Name</th>
+        <th>Genre</th>
+        <th>Request</th>
+        <th>Approved</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for request in user_requests %}
+      <tr>
+        <td>{{ request.director_name }}</td>
+        <td>{{ request.genre.all|join:", " }}</td>
+        <td>{{ request.request }}</td>
+        <td>{{ request.approved }}</td>
+        <td>
+          <a class="btn btn-primary" href="{% url 'user_request_update' request.id %}">Edit</a>
+          <a class="btn btn-danger" href="{% url 'user_request_delete' request.id %}">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a class="btn btn-success" href="{% url 'user_request_create' %}">Create Request</a>
+{% endblock %}
