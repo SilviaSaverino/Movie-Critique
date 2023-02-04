@@ -50,9 +50,9 @@ body {
 }
 
 .card {
+  background-color: antiquewhite;
   max-width: 300px;
-  min-height: 600px;
-  /* max-height: 900px; */
+  min-height: 500px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
@@ -78,18 +78,18 @@ body {
 
 .btn-primary {
   color: white;
-  background-color: rgb(0, 0, 187);
+  background-color: rgb(71, 71, 180);
   margin: 5px auto;
 }
 
 .btn-primary:hover {
-  background-color: rgb(0, 148, 222);
+  background-color: rgb(0, 153, 241);
   color: black;
 }
 
 .btn-secondary {
   color: white;
-  background-color: rgb(8, 149, 8);
+  background-color: rgb(63, 152, 63);
 }
 
 .btn-secondary:hover {
@@ -97,9 +97,9 @@ body {
   background-color: rgb(65, 233, 53);
 }
 
-.btn-bottom {
+/* .btn-bottom {
   background-color: yellow;
-}
+} */
 
 /*-------------------------------------------------------------post detail page----------------------------------------*/
 .post-title,
