@@ -153,7 +153,7 @@ body {
 }
 
 .delete i {
-  color: rgba(255, 51, 0, 0.916)
+  color: rgba(255, 51, 0, 0.916);
 }
 
 .update,
@@ -163,11 +163,19 @@ body {
 }
 
 .update:hover {
-  box-shadow: 3px 3px 5px rgb(5, 1, 246);
+  box-shadow: 
+  1px 1px 1px rgb(5, 1, 246),
+-1px -1px 1px rgb(5, 1, 246),
+-1px 1px 1px rgb(5, 1, 246),
+1px -1px 1px rgb(5, 1, 246);
 }
 
 .delete:hover {
-  box-shadow: 3px 3px 5px rgb(246, 1, 1);
+  box-shadow: 
+  1px 1px 1px rgb(246, 1, 1),
+  -1px -1px 1px rgb(246, 1, 1),
+  -1px 1px 1px rgb(246, 1, 1),
+  1px -1px 1px rgb(246, 1, 1);
 }
 
 /*-------------------------------------------------------------comment-form ----------------------------------------*/
