@@ -19,7 +19,7 @@ body {
 }
 
 /*-------------------------------------------------------------intro----------------------------------------*/
-.container.about {
+.about {
   color: antiquewhite;
   background-color: rgba(44, 4, 4, 0.437)
 }
@@ -247,6 +247,30 @@ body {
   background-color:rgba(9, 119, 236, 0.72);
   color: white;
   text-align: center;
+  margin: auto;
+}
+
+.request form textarea, input {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  display: block;
+  text-align: center;
+  justify-content: safe;
+  justify-items: unset;
+  width: 100%;
+}
+
+.request form textarea {
+  max-height: 150px;
+}
+
+
+/* .request {
+  background-color:rgba(9, 119, 236, 0.72);
+  color: white;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -262,7 +286,7 @@ body {
   display: inline-grid;
   justify-content:space-evenly;
   margin-bottom: 5px;
-}
+} */
 
 /*------------------------------------------------------------ director detail----------------------------------------*/
 
@@ -278,3 +302,5 @@ body {
   margin: 5px auto;
   list-style-type: none;
 }
+
+/*------------------------------------------------------------ media query ----------------------------------------*/

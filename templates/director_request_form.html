@@ -1,18 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <div class="container request">
   <div class="row">
-    <p>request a new director and suggest movies </p>
-
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <input type="submit" value="Save">
-    </form>
+    <div class="col-12 text-center">
+      <h4> Request a new director and suggest movies </h4>
+    </div>
   </div>
-</div>
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save">
+      </form>
+    </div>
+  </div>
+</div> 
 
-
-
-{% endblock%}
+{% endblock %}
