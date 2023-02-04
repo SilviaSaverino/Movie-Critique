@@ -21,7 +21,7 @@ body {
 /*-------------------------------------------------------------intro----------------------------------------*/
 .about {
   color: antiquewhite;
-  background-color: rgba(44, 4, 4, 0.437)
+  background-color: rgba(44, 4, 4, 0.6);
 }
 
 
@@ -196,7 +196,9 @@ body {
 .logout,
 .login,
 .register {
-  background-color: rgba(255, 255, 255, 0.697);
+  color: antiquewhite;
+  background-color: rgba(44, 4, 4, 0.6);
+  /* background-color: rgba(44, 4, 4, 0.6); */
   text-align: center;
   position: absolute;
   top: 50%;
@@ -244,8 +246,8 @@ body {
 /*------------------------------------------------------------ request form ----------------------------------------*/
 
 .request {
-  background-color:rgba(9, 119, 236, 0.72);
-  color: white;
+  color: antiquewhite;
+  background-color: rgba(44, 4, 4, 0.6);
   text-align: center;
   margin: auto;
 }
@@ -291,7 +293,7 @@ body {
 /*------------------------------------------------------------ director detail----------------------------------------*/
 
 .director {
-  background-color: rgba(44, 4, 4, 0.437);
+  background-color: rgba(44, 4, 4, 0.6);
   color: antiquewhite;
   text-align: center;
 }
