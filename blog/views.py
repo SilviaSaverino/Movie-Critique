@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.shortcuts import redirect
-from .models import Post, MovieGenre, Director, Comment
+from .models import Post, MovieGenre, Director, Comment, UserRequest
 from .forms import CommentForm, UserRequestForm   #MovieGenreForm
 
 
@@ -164,7 +164,7 @@ def UserRequestCreate(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Director request submitted successfully')
-            return redirect('moviegenre_list')
+            return redirect('your_request')
     else:
         form = UserRequestForm()
     return render(request, 'director_request_form.html', {'form': form})
@@ -193,4 +193,13 @@ def UserRequestDelete(request, request_id):
     """
     user_request = get_object_or_404(UserRequest, id=request_id)
     user_request.delete()
-    return redirect('director_request_form.html')
+    return redirect('your_request')
+
+
+class YourRequest(generic.ListView):
+    model = UserRequest
+    template_name = 'your_request.html'
+    context_object_name = 'user_requests'
+
+    # def get_queryset(self):
+    #     return UserRequest.objects.filter(user=self.request.user)
