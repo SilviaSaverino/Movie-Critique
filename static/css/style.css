@@ -278,6 +278,7 @@ body {
   background-color: rgba(44, 4, 4, 0.6);
   text-align: center;
   margin-top: 20px;
+  padding: 20px;
 }
 
 .request form textarea, input {
