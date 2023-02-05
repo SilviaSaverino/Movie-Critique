@@ -301,4 +301,17 @@ body {
   list-style-type: none;
 }
 
-/*------------------------------------------------------------ media query ----------------------------------------*/
+/*------------------------------------------------------------ your_request page ----------------------------------------*/
+
+.requests-intro {
+  color: antiquewhite;
+  background-color: rgba(44, 4, 4, 0.6);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.request-list {
+  border: solid 2px white;
+  background-color: #fefefe6c;
+}
+

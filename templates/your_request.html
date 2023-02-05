@@ -3,23 +3,27 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-md-6 mb-4 mt-3" id="reviews">
+        <div class="col-12 requests-intro">
             <h3>Your Requests</h3>
+        </div>  
             <hr>
             <div>
                 {% for request in user_requests %}
-                <div class="comments" style="padding: 10px;">
+                <div class="request-list" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        {{ request.director_name }}
-                        Request ID: {{ request.id }}
+                        You have requested: {{ request.director_name }}
+                    </p>
                         Current User: {{ user.id }}
                         Request Author: {{ request.author }}
-                    </p>
                     <hr>
                     <div>
-                        {{ request.request }}
-                        
-                        <p>Waiting approval: {{ request.approved }}</p>
+                        <p>
+                            Your additional comments:  {{ request.request }}
+                        </p>
+                       
+                        <hr>
+                        <p>We are checking all of the requests submitted by our community. <br>
+                            This request is still waiting approval: {{ request.approved }}</p>
                        
                         {% if user.is_authenticated %}
 
