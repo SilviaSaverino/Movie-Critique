@@ -10,11 +10,10 @@
             <div>
                 {% for request in user_requests %}
                 <div class="request-list" style="padding: 10px;">
+                    Current User: {{ user.id }}
                     <p class="font-weight-bold">
-                        You have requested: {{ request.director_name }}
-                    </p>
-                        Current User: {{ user.id }}
-                        Request Author: {{ request.author }}
+                        You have requested the director: {{ request.director_name }}
+                    </p>  
                     <hr>
                     <div>
                         <p>
@@ -22,9 +21,13 @@
                         </p>
                        
                         <hr>
-                        <p>We are checking all of the requests submitted by our community. <br>
-                            This request is still waiting approval: {{ request.approved }}</p>
-                       
+                        {% if request.approved == False %}
+                        <p class="request-check">We are checking all of the requests submitted by our community. <br>
+                            This request is still waiting approval</p>
+
+                        {% else %}
+                        <p class="request-check">Our members are working on this request</p>    
+                        {% endif %}
                         {% if user.is_authenticated %}
 
                             {% if request.author == user %}

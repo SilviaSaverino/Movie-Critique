@@ -322,3 +322,8 @@ body {
   background-color: #fefefe6c;
 }
 
+.request-check {
+  background-color: rgba(44, 4, 4, 0.6);
+  color: antiquewhite;
+  max-width: fit-content;
+}
