@@ -2,17 +2,15 @@
 
 {% load crispy_forms_tags %}
 
-
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-12 edit">
             <h2> Edit your request for: <br> {{ request.director_name }} </h2>
-    
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Save Changes">
-    </form>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Save Changes">
+            </form>
         </div>
     </div>
 </div>
