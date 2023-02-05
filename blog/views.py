@@ -154,6 +154,7 @@ def MovieGenre_detail(request, genres_id):
     
 #----------------------------------------UserRequest
 
+
 def UserRequestCreate(request):
     """
     Handle creation of a director request

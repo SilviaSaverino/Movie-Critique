@@ -79,10 +79,9 @@ class Director(models.Model):
     slug = models.SlugField(max_length=500, unique=True)
     featured_image = CloudinaryField('image', default='placeholder')
     bio = models.TextField()
-    
 
     def __str__(self):
-       return self.director_name
+        return self.director_name
 
 
 class UserRequest(models.Model):
