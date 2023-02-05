@@ -7,11 +7,17 @@
             <h2>Directors for genre: {{ genre.genre_name }}</h2>
             <hr>
             <p>Can't find the director you were looking for?</p>
+
+            {% if user.is_authenticated %}
             <p>Submit a request through our <a href="{% url 'director_request_form' %}">form!</a> </p>
+            {% else %}
+                <p>
+                    To request a director just <br><a href="{% url 'account_login' %}">Login</a>
+                </p>
+            {% endif %}
         </div>
     </div>
 </div>
-
 
 {% for director in directors %}
 <div class="container director-detail">
