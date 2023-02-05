@@ -193,6 +193,7 @@ def UserRequestDelete(request, request_id):
     """
     user_request = get_object_or_404(UserRequest, id=request_id)
     user_request.delete()
+    messages.warning(request, "Deleting your request")
     return redirect('your_request')
 
 
