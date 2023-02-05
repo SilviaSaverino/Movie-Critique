@@ -158,6 +158,12 @@ body {
   text-align: center;
 }
 
+.must-login {
+  border: solid 2px black;
+  color: antiquewhite;
+  background-color: rgba(44, 4, 4, 0.6);
+}
+
 .update i {
   color: rgb(44, 0, 255);
 }
