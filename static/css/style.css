@@ -115,6 +115,10 @@ body {
 }
 
 /*-------------------------------------------------------------post detail page----------------------------------------*/
+#movie-description {
+  word-wrap: break-word;
+}
+
 .post-title,
 .post-subtitle {
   text-align: center;
