@@ -3,6 +3,18 @@ body {
   background-size: cover;
 }
 
+#msg {
+  color: antiquewhite;
+  background-color: rgba(44, 4, 4, 0.6);
+  text-align: center;
+  position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+
+
 .footer {
   position: fixed;
   left: 0;
@@ -25,7 +37,7 @@ body {
 /*-------------------------------------------------------------intro----------------------------------------*/
 .hero {
   width: 100%;
-  margin: 20px auto;  
+  margin: 20px auto;
 }
 
 .about {
@@ -179,19 +191,19 @@ body {
 }
 
 .update:hover {
-  box-shadow: 
-  1px 1px 1px rgb(5, 1, 246),
--1px -1px 1px rgb(5, 1, 246),
--1px 1px 1px rgb(5, 1, 246),
-1px -1px 1px rgb(5, 1, 246);
+  box-shadow:
+    1px 1px 1px rgb(5, 1, 246),
+    -1px -1px 1px rgb(5, 1, 246),
+    -1px 1px 1px rgb(5, 1, 246),
+    1px -1px 1px rgb(5, 1, 246);
 }
 
 .delete:hover {
-  box-shadow: 
-  1px 1px 1px rgb(246, 1, 1),
-  -1px -1px 1px rgb(246, 1, 1),
-  -1px 1px 1px rgb(246, 1, 1),
-  1px -1px 1px rgb(246, 1, 1);
+  box-shadow:
+    1px 1px 1px rgb(246, 1, 1),
+    -1px -1px 1px rgb(246, 1, 1),
+    -1px 1px 1px rgb(246, 1, 1),
+    1px -1px 1px rgb(246, 1, 1);
 }
 
 /*-------------------------------------------------------------comment-form ----------------------------------------*/
@@ -230,9 +242,9 @@ body {
   max-width: 550px;
 }
 
-#signup_form > *{
+#signup_form>* {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   margin-bottom: 5px;
 }
 
@@ -281,7 +293,8 @@ body {
   padding: 20px;
 }
 
-.request form textarea, input {
+.request form textarea,
+input {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
@@ -306,7 +319,7 @@ body {
   margin-top: 20px;
 }
 
-.director-detail, 
+.director-detail,
 .single-director {
   background-color: antiquewhite;
   margin: 5px auto;
