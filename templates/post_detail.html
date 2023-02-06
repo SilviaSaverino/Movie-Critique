@@ -64,13 +64,10 @@
                     {% for review in reviews %}
                     <div class="comments" style="padding: 10px;">
                         <p class="font-weight-bold">
-                            {{ review.name }}
-                            review id: {{ review.id }}
-                            current user: {{ user.id }}
-                            review author : {{ review.author}}
+                            Written by: {{ review.author}} on
                             <span class=" text-muted font-weight-normal">
                                 {{ review.created_on }}
-                            </span> wrote:
+                            </span>
                         </p>
                         <hr>
                         <div class="comments-body">
@@ -109,7 +106,6 @@
                 {% else %}
                 {% if user.is_authenticated %}
                 <h3>Leave a review:</h3>
-                <p>Posting as: {{ user.username }}</p>
                 <hr>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
