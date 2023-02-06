@@ -24,34 +24,34 @@
                         {{ post.content | safe }}
                     </p>
                 </div>
-                <div class="row" id="liked-counted">
-                    <div class="col-1">
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form method="POST" class="d-inline" action="{% url 'post_like' post.slug %}">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="fas fa-heart red"></i></button>
-                                {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
-                                {% endif %}
-                            </form>
+            <div class="row" id="liked-counted">
+                <div class="col-1">
+                    <strong>
+                        {% if user.is_authenticated %}
+                        <form method="POST" class="d-inline" action="{% url 'post_like' post.slug %}">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                    class="fas fa-heart red"></i></button>
                             {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                    class="far fa-heart"></i></button>
                             {% endif %}
-                            <span class="text-secondary">{{ post.number_of_likes }} </span>
-                        </strong>
-                    </div>
-                    <div class="col-1">
-                        {% with reviews.count as total_reviews %}
-                        <strong class="text-secondary"><i class="fa-regular fa-comment"></i>
-                            {{ total_reviews }}</strong>
-                        {% endwith %}
-                    </div>
+                        </form>
+                        {% else %}
+                        <span class="text-secondary"><i class="far fa-heart"></i></span>
+                        {% endif %}
+                        <span class="text-secondary">{{ post.number_of_likes }} </span>
+                    </strong>
                 </div>
-
+                <div class="col-1">
+                    {% with reviews.count as total_reviews %}
+                    <strong class="text-secondary"><i class="fa-regular fa-comment"></i>
+                        {{ total_reviews }}</strong>
+                    {% endwith %}
+                </div>
+            </div>
+              
             </div>
         </div>
     </div>
@@ -73,9 +73,10 @@
                             </span> wrote:
                         </p>
                         <hr>
-                        <div>
+                        <div class="comments-body">
                             {{ review.body | linebreaks }}
-
+                        </div>
+                        <div>
                             {% if user.is_authenticated %}
 
                             {% if review.author == user %}
@@ -100,8 +101,10 @@
             </div>
             <div class="col-md-6 mb-4 mt-3" id="comment-form">
                 {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your review is awaiting approval
+                <div class="modal-body">
+                    <div class="alert alert-success" role="alert">
+                      Your review is awaiting approval
+                    </div>
                 </div>
                 {% else %}
                 {% if user.is_authenticated %}
