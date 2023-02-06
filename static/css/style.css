@@ -290,8 +290,8 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.genrelist p {
-  color: white;
+.genre-name {
+  text-align: center;
 }
 
 .scrollable-list {
