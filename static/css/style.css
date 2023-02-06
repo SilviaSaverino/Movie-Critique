@@ -333,10 +333,17 @@ input {
   margin-top: 20px;
 }
 
+.director-bio {
+  max-height: 150px;
+  overflow: auto;
+  padding: 20px;
+}
+
 .director-detail,
 .single-director {
   background-color: antiquewhite;
-  margin: 5px auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   list-style-type: none;
 }
 
