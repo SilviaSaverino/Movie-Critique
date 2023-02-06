@@ -117,6 +117,8 @@ body {
 /*-------------------------------------------------------------post detail page----------------------------------------*/
 #movie-description {
   word-wrap: break-word;
+  max-height: 100px;
+  overflow: auto;
 }
 
 .post-title,
