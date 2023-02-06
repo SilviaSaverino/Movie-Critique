@@ -345,3 +345,20 @@ input {
   color: antiquewhite;
   max-width: fit-content;
 }
+
+/*------------------------------------------------------------ media queries----------------------------------------*/
+
+
+
+@media (max-width: 645px) {
+  .card {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 1200px) {
+  .col-md-3 {
+    width: 50%;
+    float: left;
+  }
+}
