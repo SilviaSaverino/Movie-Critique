@@ -15,7 +15,6 @@ body {
     width: 70%;  
 }
 
-
 .footer {
   position: fixed;
   left: 0;
@@ -76,13 +75,12 @@ body {
   box-shadow: 2px 2px 5px #ccc;
 }
 
-.main-content {
-  padding: 50px;
-}
-
-/* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.588);
+}
+
+.main-content {
+  padding: 50px;
 }
 
 .btn {
@@ -90,12 +88,14 @@ body {
   justify-content: center;
   width: 100%;
   display: inline-block;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
   color: white;
   background-color: rgb(71, 71, 180);
   margin: 5px auto;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
@@ -106,6 +106,7 @@ body {
 .btn-secondary {
   color: white;
   background-color: rgb(63, 152, 63);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary:hover {
@@ -188,11 +189,14 @@ body {
 
 .update,
 .delete {
-  background-color: rgb(233, 208, 208);
-  border-radius: 50%;
+  background-color: rgb(229, 212, 189);
+  border-radius: 5%;
+  width: 40px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .update:hover {
+  background-color: rgb(210, 193, 160);
   box-shadow:
     1px 1px 1px rgb(5, 1, 246),
     -1px -1px 1px rgb(5, 1, 246),
@@ -201,6 +205,7 @@ body {
 }
 
 .delete:hover {
+  background-color: rgb(210, 193, 160);
   box-shadow:
     1px 1px 1px rgb(246, 1, 1),
     -1px -1px 1px rgb(246, 1, 1),
@@ -263,9 +268,7 @@ body {
   width: 90%;
 }
 
-
 /*-------------------------------------------------------------moviegenre_list----------------------------------------*/
-
 .genrelist {
   color: antiquewhite;
   background-color: rgba(44, 4, 4, 0.6);
@@ -286,7 +289,6 @@ body {
 }
 
 /*------------------------------------------------------------ request form ----------------------------------------*/
-
 .request {
   color: antiquewhite;
   background-color: rgba(44, 4, 4, 0.6);
@@ -313,7 +315,6 @@ input {
 }
 
 /*------------------------------------------------------------ director detail----------------------------------------*/
-
 .director {
   background-color: rgba(44, 4, 4, 0.6);
   color: antiquewhite;
@@ -329,7 +330,6 @@ input {
 }
 
 /*------------------------------------------------------------ your_request page ----------------------------------------*/
-
 .requests-intro {
   color: antiquewhite;
   background-color: rgba(44, 4, 4, 0.6);
@@ -349,9 +349,6 @@ input {
 }
 
 /*------------------------------------------------------------ media queries----------------------------------------*/
-
-
-
 @media (max-width: 645px) {
   .card {
     max-width: 100%;
