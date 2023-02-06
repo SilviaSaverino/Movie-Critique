@@ -7,11 +7,12 @@ body {
   color: antiquewhite;
   background-color: rgba(44, 4, 4, 0.6);
   text-align: center;
+  z-index: 1;
   position: fixed;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 70%;  
 }
 
 

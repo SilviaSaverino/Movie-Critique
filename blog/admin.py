@@ -45,4 +45,3 @@ class UserRequestAdmin(admin.ModelAdmin):
     list_filter = ('approved',)
     search_fields = ['director_name']
     actions = ['approve_director_request']
-        

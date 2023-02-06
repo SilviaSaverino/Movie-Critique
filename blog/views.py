@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.shortcuts import redirect
 from .models import Post, MovieGenre, Director, Comment, UserRequest
-from .forms import CommentForm, UserRequestForm   #MovieGenreForm
+from .forms import CommentForm, UserRequestForm   # MovieGenreForm
 
 
 class PostList(generic.ListView):
@@ -121,7 +121,7 @@ def delete_review(request, review_id):
     return redirect('post_detail', slug=review.post.slug)
 
 
-#----------------------------------------MovieGenre
+# ----------------------------------------MovieGenre
 
 
 def MovieGenre_list(request):
@@ -139,20 +139,20 @@ def MovieGenre_list(request):
 
 def MovieGenre_detail(request, genres_id):
     """
-    Show details of a specific movie genre and 
+    Show details of a specific movie genre and
     movie directors
     """
     genre = get_object_or_404(MovieGenre, id=genres_id)
     directors = Director.objects.filter(genre=genre)
     return render(request,
-                  'director_detail.html', 
+                  'director_detail.html',
                   {
                     'genre': genre,
                     'directors': directors
                   },
-                )
-    
-#----------------------------------------UserRequest
+                  )
+
+# ----------------------------------------UserRequest
 
 
 def UserRequestCreate(request):
@@ -163,7 +163,8 @@ def UserRequestCreate(request):
         form = UserRequestForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Director request submitted successfully')
+            messages.success(
+                request, 'Director request submitted successfully')
             return redirect('your_request')
     else:
         form = UserRequestForm()
@@ -185,8 +186,8 @@ def UserRequestUpdate(request, request_id):
     else:
         form = UserRequestForm(instance=user_request)
     return render(request, 'director_request_form.html', {'form': form})
- 
- 
+
+
 def UserRequestDelete(request, request_id):
     """
     Handle deletion of a user request
