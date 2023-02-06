@@ -117,7 +117,7 @@ body {
 /*-------------------------------------------------------------post detail page----------------------------------------*/
 #movie-description {
   word-wrap: break-word;
-  max-height: 100px;
+  max-height: 210px;
   overflow: auto;
 }
 
@@ -359,11 +359,19 @@ input {
   .card {
     max-width: 100%;
   }
+
+  #liked-counted {
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+  }
 }
+
+
 
 @media (min-width: 650px) and (max-width: 1200px) {
   .col-md-3 {
     width: 50%;
     float: left;
-  }
+  }  
 }
