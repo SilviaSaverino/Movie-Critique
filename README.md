@@ -51,3 +51,4 @@ The project was divided into various segments through the utilization of the Kan
 3 - Done
 
 Additionally, Github issues were employed to generate User Stories and any other necessary repairs or updates for the project. This is where the project users were assigned and labels were added to provide a quick visualization of task importance and assist in task prioritization. The User Story was incorporated into the relevant Iteration and the project as a whole.
+
