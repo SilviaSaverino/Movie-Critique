@@ -39,5 +39,15 @@ As a site Admin, I want to be able to:
 - delete spam or fake reviews that are submitted to the site.
 - review user requests of a director so that i can approve them and grow my site content.
 
+# Agile
 
+This project was planned utilizing the Agile Methodology. The implementation of this approach was carried out through the utilization of Github and the Project Board, which can be viewed here below:
 
+[! screenshot of kanban board](/MovieCritique/docs/userstoriesgit.png)
+
+The project was divided into various segments through the utilization of the Kanban board found in the projects view on Github:
+1 - To do
+2 - In progress
+3 - Done
+
+Additionally, Github issues were employed to generate User Stories and any other necessary repairs or updates for the project. This is where the project users were assigned and labels were added to provide a quick visualization of task importance and assist in task prioritization. The User Story was incorporated into the relevant Iteration and the project as a whole.
