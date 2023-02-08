@@ -11,7 +11,6 @@ Where everyone is welcomed in joining the conversation with other passionate cin
 ## Website goals:
 
 - To provide a platform for users to share their opinions and reviews on movies. 
-- To allow users to search for and discover new movies based on reviews and ratings. 
 - To provide users with the ability to rate movies and leave written reviews. 
 - To enable users to easily find reviews for movies they are interested in viewing. 
 - To provide a user-friendly interface for users to navigate and interact with the website. 
@@ -28,17 +27,17 @@ As a Site User I want to be able to:
 - edit and correct my own reviews so that I can ensure the accuracy of my feedbacks.
 - delete my reviews so that I can remove any inaccuracies or irrelevant content.
 - like and unlike posts so that I can indicate my appreciation or lack thereof for the post in question.
-- leave comments on a posted reviews so that I can be involved in the conversation.
-- sort reviews by rating, date, or number of likes so that I can easily find the most helpful reviews.
+- request a director so that i can later find some of his/her movies on the website.
+- filter director per genre, so that i can have a better idea of what to expect from a movie of a certain director.
 
 ## Admin stories:
 
 As a site Admin, I want to be able to: 
-- create draft posts so that I can finish writing the content later
-- update posts so that movie description are up to date
+- create draft posts so that I can finish writing the content later.
+- update posts so that movie description are up to date.
 - read and moderate reviews to ensure that they are appropriate and do not contain any offensive content.
 - delete spam or fake reviews that are submitted to the site.
-- view statistics on the number of reviews and ratings submitted to the site so that I can track the site's performance.
+- review user requests of a director so that i can approve them and grow my site content.
 
 
 
