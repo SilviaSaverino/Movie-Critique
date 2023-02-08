@@ -52,3 +52,69 @@ The project was divided into various segments through the utilization of the Kan
 
 Additionally, Github issues were employed to generate User Stories and any other necessary repairs or updates for the project. This is where the project users were assigned and labels were added to provide a quick visualization of task importance and assist in task prioritization. The User Story was incorporated into the relevant Iteration and the project as a whole.
 
+
+# Database Schema
+
+# Design wireframes
+
+# Website Structure
+
+# Design & Color scheme
+
+# Features
+
+## Navigation
+
+## Home page
+
+## Sign Up,Login and Logout 
+
+## Post Details
+
+## Reviews
+
+## Directors&Genre
+
+## Director request
+
+# Future features
+
+# Testing
+
+## Validation
+
+### Html Validation
+
+### Css Validation
+
+### JS Validation
+
+### Python Validation
+
+## Lighthouse
+
+## Manual testing
+
+## Bugs & Fixes
+
+# Deployment
+
+## Deployment to Heroku 
+
+### Django project creation
+
+### Heroku app creation
+
+### Enviroment Variables 
+
+### Settings.py
+
+### Final Deployment
+
+## Github
+
+# Technologies Used
+
+# Credits 
+
+# Acknowledgements
