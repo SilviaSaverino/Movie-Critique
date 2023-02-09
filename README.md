@@ -66,7 +66,9 @@ At all time the users will be able to log out if they wish to do so.
 
 # Design & Color scheme
 
+The website features a distinctive color scheme, utilizing a rich dark yellow/orange shade complemented by bright white and eye-catching green accents. The selection of these colors was deliberate, aimed at creating a visually impactful design while highlighting the images on the site.
 
+Throughout the website, a visually striking dark background is paired with an elegant antique white color for the content to clearly convey information to the user. This color scheme is applied consistently for the display of introductions, posts, and administrative messages.
 
 # Features
 
