@@ -52,14 +52,21 @@ The project was divided into various segments through the utilization of the Kan
 
 Additionally, Github issues were employed to generate User Stories and any other necessary repairs or updates for the project. This is where the project users were assigned and labels were added to provide a quick visualization of task importance and assist in task prioritization. The User Story was incorporated into the relevant Iteration and the project as a whole.
 
-
 # Database Schema
 
 # Design wireframes
 
 # Website Structure
 
+Upon initial access of the website, the user is greeted with a clear and intuitive layout that allows for quick and easy navigation. The homepage is immediately visible and both the sign-in and log-in options are readily available on the navigation bar. In the event that the user chooses to register, they will then have the ability to log in, and the "Your Request" page link will replace the "Sign Up" page one.
+
+The user can explore the website by clicking on the post links, which will direct them to either the reviews/comments page or the genre list page. On the genre list page, the user can select their preferred genre and view a list of movie directors. Both of these pages are readily accessible from the navigation bar, allowing the user to easily move back and forth as needed.
+
+At all time the users will be able to log out if they wish to do so.
+
 # Design & Color scheme
+
+
 
 # Features
 
