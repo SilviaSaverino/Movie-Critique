@@ -101,9 +101,9 @@ Its design makes it clear what the purpose of the website is, with a striking he
 
 Upon successful login, a notification alerts the user to confirm their login status.
 
-By scrolling down, the user can view movie cards displaying brief descriptions and two buttons to redirect them to either the review page for each movie or the director and genre page.
+By scrolling down, the user can view movie cards displaying the movies currently posted in the website.
 
-====================ADD IMG HERE=======================
+![screenshot of post movie card](/MovieCritique/docs/post.png)
 
 ## Sign Up,Login and Logout 
 
@@ -120,6 +120,12 @@ These three pages are designed with consistent styles and are fully responsive, 
 ![screenshot of the log out page](/MovieCritique/docs/logout.png)
 
 ## Post Details
+
+The card displayed on the homepage showcases a sleek design that presents the movie's poster, title, brief summary, and the author of the post. 
+
+This layout offers the user two options - either to view the reviews or navigate to the director and genre section of the site.
+
+![screenshot of a movie post](/MovieCritique/docs/post.png)
 
 ## Reviews
 
