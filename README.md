@@ -91,6 +91,20 @@ The tabs displayed on the navigation bar are dependent on the user's login statu
 
 ## Home page
 
+The main page of the website, the Home Page, is the first thing that is displayed upon site loading. 
+
+Its design makes it clear what the purpose of the website is, with a striking hero image, an introduction of what Movie Critique is about; the site name, and a call to action featuring log in and sign up buttons. 
+
+![screenshot of hero image](/MovieCritique/docs/hero.png)
+
+![screenshot of movie critique intro](/MovieCritique/docs/mcintro.png)
+
+Upon successful login, a notification alerts the user to confirm their login status.
+
+By scrolling down, the user can view movie cards displaying brief descriptions and two buttons to redirect them to either the review page for each movie or the director and genre page.
+
+====================ADD IMG HERE=======================
+
 ## Sign Up,Login and Logout 
 
 ## Post Details
