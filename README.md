@@ -129,16 +129,33 @@ This layout offers the user two options - either to view the reviews or navigate
 
 ## Reviews
 
-Upon clicking on a movie card, the user will be presented with the full details of the selected movie including its title, author, and post date, as well as a comprehensive description and movie image. The user will also have the following options at their disposal:
+Upon clicking on a movie card, the user will be presented with the full details of the selected movie including its title, author, and post date, as well as a comprehensive description and movie image. 
+![screenshot of movie post with description](/MovieCritique/docs/postdetailsrev.png)
+
+The user will also have the following options at their disposal:
 
   -  View the number of reviews that have been posted
   -  Like the movie by clicking on the heart icon (available after login)
-  -  Check the total number of likes the movie has received
+  -  Check the total number of likes the movie has received 
+  
+     ![screenshot of like buttons and reviews count](/MovieCritique/docs/likebutton.png)
+  
   -  Write a review (available after login)
+
+     ![screenshot of leave reviews section](/MovieCritique/docs/leavereviews.png)
+
   -  Edit their own review using the edit icon (only visible for their own reviews)
   -  Delete their own review using the trash bin icon (only visible for their own reviews)
+     
+     ![screenshot of edit and cancel buttons](/MovieCritique/docs/editcancelbutton.png)
 
-Please note that users will not be able to edit or remove reviews written by other users. Additionally, all reviews will be subject to review by an administrator to ensure that they are appropriate and do not contain explicit language or offensive content. Upon submitting a review, the user will receive a notification indicating that the review is pending approval.
+Please note that users will not be able to edit or remove reviews written by other users. 
+
+Additionally, all reviews will be subject to review by an administrator to ensure that they are appropriate and do not contain explicit language or offensive content. 
+
+Upon submitting a review, the user will receive a notification indicating that the review is pending approval.
+
+![screenshot of awaiting approval message](/MovieCritique/docs/awaitingapproval.png)
 
 
 
