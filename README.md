@@ -63,8 +63,6 @@ Additionally, Github issues were employed to generate User Stories and any other
 
 •	The MovieGenre model has a many-to-many relationship with the Director model, meaning that a single genre can be associated with multiple directors and a single director can be associated with multiple genres. The relationship is defined by a ManyToManyField in the Director model to the MovieGenre model.
 
-
-
 # Design wireframes
 
 # Website Structure
@@ -84,6 +82,12 @@ Throughout the website, a visually striking dark background is paired with an el
 # Features
 
 ## Navigation
+
+The navigation of the website is achieved through the top navigation bar on each page, which remains consistent in appearance as the user navigates throughout the site. 
+
+The tabs displayed on the navigation bar are dependent on the user's login status and page visited.
+
+![screenshot of navigation bar](/MovieCritique/docs/navigation.png)
 
 ## Home page
 
