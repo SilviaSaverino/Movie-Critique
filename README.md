@@ -43,7 +43,7 @@ As a site Admin, I want to be able to:
 
 This project was planned utilizing the Agile Methodology. The implementation of this approach was carried out through the utilization of Github and the Project Board, which can be viewed here below:
 
-[! screenshot of kanban board](/MovieCritique/docs/userstoriesgit.png)
+![screenshot of kanban board](/MovieCritique/docs/userstoriesgit.png)
 
 The project was divided into various segments through the utilization of the Kanban board found in the projects view on Github:
 1 - To do
@@ -53,6 +53,17 @@ The project was divided into various segments through the utilization of the Kan
 Additionally, Github issues were employed to generate User Stories and any other necessary repairs or updates for the project. This is where the project users were assigned and labels were added to provide a quick visualization of task importance and assist in task prioritization. The User Story was incorporated into the relevant Iteration and the project as a whole.
 
 # Database Schema
+![screenshot of database schema diagram](/MovieCritique/docs/proj4models.jpeg)
+
+•	The Post model has a one-to-many relationship with the Comment model, meaning that a single post can have multiple comments. The relationship is defined by a ForeignKey in the Comment model to the Post model.
+
+•	The Post model also has a many-to-many relationship with the User model, meaning that a single post can be liked by multiple users, and a single user can like multiple posts. The relationship is defined by a ManyToManyField in the Post model to the User model.
+
+•	The UserRequest model has a many-to-many relationship with the MovieGenre model, meaning that a single request can be associated with multiple genres and a single genre can be associated with multiple requests. The relationship is defined by a ManyToManyField in the UserRequest model to the MovieGenre model.
+
+•	The MovieGenre model has a many-to-many relationship with the Director model, meaning that a single genre can be associated with multiple directors and a single director can be associated with multiple genres. The relationship is defined by a ManyToManyField in the Director model to the MovieGenre model.
+
+
 
 # Design wireframes
 
