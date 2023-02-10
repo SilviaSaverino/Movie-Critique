@@ -235,12 +235,13 @@ body {
 
 .comments {
   border: solid 2px white;
-  background-color: #fefefe6c;
+  background-color: #fefefea6;
 }
 
 .comments-body {
   max-height: 115px;
   overflow: auto;
+  margin-bottom: 5px;
 }
 
 #comment-form button {
