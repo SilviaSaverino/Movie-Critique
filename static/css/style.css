@@ -9,10 +9,10 @@ body {
   text-align: center;
   z-index: 1;
   position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;  
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
 }
 
 .footer {
@@ -147,7 +147,11 @@ body {
 }
 
 .btn-like:hover {
-  box-shadow: 2px 2px 5px rgb(246, 1, 124);
+  box-shadow:
+    1px 1px 1px rgb(246, 1, 124),
+    -1px -1px 1px rgb(246, 1, 124),
+    -1px 1px 1px rgb(246, 1, 124),
+    1px -1px 1px rgb(246, 1, 124);
 }
 
 .masthead {
@@ -180,9 +184,13 @@ body {
 }
 
 .must-login {
-  border: solid 2px black;
-  color: antiquewhite;
-  background-color: rgba(44, 4, 4, 0.6);
+  background-color: #baf4f4de;
+  color: darkgreen;
+  margin: 5px;
+}
+
+.must-login a {
+  text-decoration: none;
 }
 
 .update i {
@@ -382,5 +390,5 @@ input {
   .col-md-3 {
     width: 50%;
     float: left;
-  }  
+  }
 }
