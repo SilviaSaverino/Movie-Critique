@@ -107,6 +107,18 @@ By scrolling down, the user can view movie cards displaying brief descriptions a
 
 ## Sign Up,Login and Logout 
 
+The Log In page can be reached through the navigation bar and has a link to the Sign Up and it offers a link to the Sign Up page for users who may have accidentally clicked on the wrong option. The sign up page will instead offer a link to the login page for the same reason.
+
+Should the user wish to logout this won't happen automatically, but  a confirmation will be required to proceed.
+
+These three pages are designed with consistent styles and are fully responsive, using django-allauth for user authentication and for each option, the user will be receive a confirmation notified by a pop up message.
+
+![screenshot of the log in page](/MovieCritique/docs/login.png)
+
+![screenshot of the sign up page](/MovieCritique/docs/signup.png)
+
+![screenshot of the log out page](/MovieCritique/docs/logout.png)
+
 ## Post Details
 
 ## Reviews
