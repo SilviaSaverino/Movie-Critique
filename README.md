@@ -157,9 +157,19 @@ Upon submitting a review, the user will receive a notification indicating that t
 
 ![screenshot of awaiting approval message](/MovieCritique/docs/awaitingapproval.png)
 
-
-
 ## Directors&Genre
+
+Upon arriving at the Director & Genre page, the user will be greeted with a brief introduction followed by a scrollable list of movie genres. Each genre features the genre type, an age recommendation, and a concise description of the genre's content.
+
+![screenshot of genrelist](/MovieCritique/docs/genrelist.png)
+
+By choosing one of the listed genres, the user will be directed to the Directors page where they can explore further details and information about each director. The page will showcase a picture of the director alongside a concise biography, highlighting some of their notable works.
+
+======================IMG HERE=========================
+
+For users who wish to discover new directors, a convenient link is provided for them to request the addition of a new director, along with suggested films to be added to the website.
+
+![screenshot of director request link](/MovieCritique/docs/formlink.png)
 
 ## Director request
 
