@@ -165,7 +165,7 @@ Upon arriving at the Director & Genre page, the user will be greeted with a brie
 
 By choosing one of the listed genres, the user will be directed to the Directors page where they can explore further details and information about each director. The page will showcase a picture of the director alongside a concise biography, highlighting some of their notable works.
 
-======================IMG HERE=========================
+![screenshot of director bio](/MovieCritique/docs/directorbio.png)
 
 For users who wish to discover new directors, a convenient link is provided for them to request the addition of a new director, along with suggested films to be added to the website.
 
