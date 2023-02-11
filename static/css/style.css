@@ -340,7 +340,7 @@ input {
 }
 
 .director-bio {
-  max-height: 150px;
+  max-height: 300px;
   overflow: auto;
   padding: 20px;
 }
@@ -351,6 +351,12 @@ input {
   margin-top: 20px;
   margin-bottom: 20px;
   list-style-type: none;
+}
+
+.single-director img {
+  max-height: 300px;
+  margin-top: 20px;
+
 }
 
 /*------------------------------------------------------------ your_request page ----------------------------------------*/
