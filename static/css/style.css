@@ -355,8 +355,8 @@ input {
 
 .single-director img {
   max-height: 300px;
-  margin-top: 20px;
-
+  width: 90%;
+  padding: 10px;
 }
 
 /*------------------------------------------------------------ your_request page ----------------------------------------*/
