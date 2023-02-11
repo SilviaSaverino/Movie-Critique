@@ -391,11 +391,22 @@ input {
   }
 }
 
-
-
+/*---------------------- directors bio ------------*/
 @media (min-width: 650px) and (max-width: 1200px) {
   .col-md-3 {
     width: 50%;
     float: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-director {
+    flex-direction: column;
+  }
+
+  .single-director .col-4,
+  .single-director .col-8 {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
