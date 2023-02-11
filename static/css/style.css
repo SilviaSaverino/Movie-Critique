@@ -331,6 +331,14 @@ input {
   max-height: 150px;
 }
 
+.submit-request {
+  background-color: rgb(5, 210, 5);
+}
+
+.submit-request:hover {
+  background-color: rgb(4, 248, 4);
+}
+
 /*------------------------------------------------------------ director detail----------------------------------------*/
 .director {
   background-color: rgba(44, 4, 4, 0.6);

@@ -11,10 +11,10 @@
   </div>
   <div class="row justify-content-center">
     <div class="col-lg-6 col-md-8 col-sm-10">
-      <form method="post">
+      <form method="post" class="director-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Submit request">
+        <input class="submit-request" type="submit" value="Submit request">
       </form>
     </div>
   </div>
