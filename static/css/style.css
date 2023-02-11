@@ -380,11 +380,18 @@ input {
   background-color: #fafafabc;
 }
 
-.request-check {
-  background-color: rgba(44, 4, 4, 0.6);
+.request-checked {
+  background-color: rgba(5, 194, 14, 0.663);
   color: antiquewhite;
   max-width: fit-content;
 }
+
+.request-pending {
+  background-color: rgba(245, 80, 29, 0.98);
+  color: antiquewhite;
+  max-width: fit-content;
+}
+
 
 /*------------------------------------------------------------ media queries----------------------------------------*/
 @media (max-width: 645px) {
