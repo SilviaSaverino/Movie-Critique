@@ -69,7 +69,7 @@ Additionally, Github issues were employed to generate User Stories and any other
 
 Upon initial access of the website, the user is greeted with a clear and intuitive layout that allows for quick and easy navigation. The homepage is immediately visible and both the sign-in and log-in options are readily available on the navigation bar. In the event that the user chooses to register, they will then have the ability to log in, and the "Your Request" page link will replace the "Sign Up" page one.
 
-The user can explore the website by clicking on the post links, which will direct them to either the reviews/comments page or the genre list page. On the genre list page, the user can select their preferred genre and view a list of movie directors. Both of these pages are readily accessible from the navigation bar, allowing the user to easily move back and forth as needed.
+The user can explore the website by clicking on the post links, which will direct them to either the reviews/comments page or the genre list page. On the genre list page, the user can select their preferred genre and view a list of movie directors.  Additionally, users have access to the "Your Request" page where they can check the status of their director request and edit or cancel their request. Both of these pages are readily accessible from the navigation bar, allowing the user to easily move back and forth as needed.
 
 At all time the users will be able to log out if they wish to do so.
 
@@ -172,6 +172,16 @@ For users who wish to discover new directors, a convenient link is provided for 
 ![screenshot of director request link](/MovieCritique/docs/formlink.png)
 
 ## Director request
+
+This page features a form that allows users to submit requests for new directors and suggest movies to be added to the website. These requests are subject to approval by the administrator.
+
+![screenshot of director request form](/MovieCritique/docs/directorform.png)
+
+Upon submitting their request, the user will be redirected to the "Your Request" page, where a pop-up message will confirm the successful submission of their request.
+
+## Your Request page
+
+
 
 # Future features
 
