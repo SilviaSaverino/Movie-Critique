@@ -173,7 +173,7 @@ For users who wish to discover new directors, a convenient link is provided for 
 
 ## Director request
 
-This page features a form that allows users to submit requests for new directors and suggest movies to be added to the website. These requests are subject to approval by the administrator.
+This page features a form that allows users to submit requests for new directors and suggest movies to be added to the website. 
 
 ![screenshot of director request form](/MovieCritique/docs/directorform.png)
 
@@ -181,7 +181,11 @@ Upon submitting their request, the user will be redirected to the "Your Request"
 
 ## Your Request page
 
+On this page, the user can view all of their requests and the status of each, whether it's pending approval or currently being worked on. During the pending period, the user has the option to edit or cancel their requests.
 
+![screenshot of user request](/MovieCritique/docs/pending.png)
+
+![screenshot of approved request](/MovieCritique/docs/approved.png)
 
 # Future features
 

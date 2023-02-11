@@ -88,6 +88,9 @@ class UserRequest(models.Model):
     """
     Table model to represent a user request for a new director
     """
+    # ask mentor about author below ----> it will appear as None 'cause of the null=True, but if i set it as default=""
+    # like for the Comment Value, the site will not work
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     director_name = models.CharField(max_length=50)
     genre = models.ManyToManyField(MovieGenre, blank=True)
     request = models.TextField()
