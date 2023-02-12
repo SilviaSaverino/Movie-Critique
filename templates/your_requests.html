@@ -11,7 +11,7 @@
             {% for request in user_requests %}
             <div class="request-list" style="padding: 10px;">
                 <p class="font-weight-bold">
-                    Director requested: <br> "{{ request.director_name }}" by {{request.author}}
+                    Director requested by {{request.author}}: <br> "{{ request.director_name }}" 
                 </p>
                 <p>
                     Your comment: <br> "{{ request.request }}"

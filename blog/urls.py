@@ -7,7 +7,7 @@ urlpatterns = [
 
     path('director-request/create/', UserRequestCreate, name='director_request_form'),
 
-    path('your-request/', views.YourRequest.as_view(), name='your_request'),
+    path('your-requests/', views.YourRequest.as_view(), name='your_request'),
     path('request/<int:request_id>/edit/', views.UserRequestUpdate, name='edit_request'),
     path('delete/<int:request_id>/', UserRequestDelete, name='delete_request'),
 

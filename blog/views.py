@@ -166,7 +166,7 @@ def UserRequestCreate(request):
             form.save(user=request.user)
             messages.success(
                 request, 'Director request submitted successfully')
-            return redirect('your_request')
+            return redirect('your_requests')
     else:
         form = UserRequestForm()
     return render(request, 'director_request_form.html', {'form': form})
@@ -183,7 +183,7 @@ def UserRequestUpdate(request, request_id):
             form.save()
             messages.warning(
                 request, "Your edited request is ready")
-            return redirect('your_request')
+            return redirect('your_requests')
     else:
         form = UserRequestForm(instance=user_request)
     return render(request, 'director_request_form.html', {'form': form})
@@ -196,10 +196,10 @@ def UserRequestDelete(request, request_id):
     user_request = get_object_or_404(UserRequest, id=request_id)
     user_request.delete()
     messages.warning(request, "Deleting your request")
-    return redirect('your_request')
+    return redirect('your_requests')
 
 
 class YourRequest(generic.ListView):
     model = UserRequest
-    template_name = 'your_request.html'
+    template_name = 'your_requests.html'
     context_object_name = 'user_requests'
