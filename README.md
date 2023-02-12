@@ -205,6 +205,12 @@ On this page, the user can view all of their requests and the status of each, wh
 
 ## Manual testing
 
+As part of ensuring the quality and reliability of the website, manual testing was conducted to validate its functionality and user experience. The following is a screenshot of a list of the functionalities that were tested.
+
+![screenshot of manual testing for user not logged in yet](/MovieCritique/docs/testingloggedout.png)
+
+![screenshot of manual testing for user logged in](/MovieCritique/docs/testingloggedin.png)
+
 ## Bugs & Fixes
 
 # Deployment
