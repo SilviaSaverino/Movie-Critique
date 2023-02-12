@@ -1,5 +1,3 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
 # Movie Critique
 
 Welcome to Movie Critique, the ultimate destination for movie lovers everywhere! This website is designed to help users make informed decisions about what to watch, with a comprehensive search feature and user-generated reviews
@@ -187,7 +185,30 @@ On this page, the user can view all of their requests and the status of each, wh
 
 ![screenshot of approved request](/MovieCritique/docs/approved.png)
 
+
 # Future features
+
+## Login: 
+- For convenience, users could log in using their social media credentials instead of creating another password to remember.
+
+## User Page:
+- In the future, I would like to enhance the user experience by adding a user page where they can personalize 
+  their experience. This page would include:
+
+   1) Avatar Selection: Users will have the option to choose an avatar that will represent them in their movie reviews.
+
+   2) Personalized Movie Review Section: A section where users can view only their own movie reviews and categorize them into "Must Watch" or "Watch Again".
+
+   3) Filter and Sort Functionality: Users will be able to filter and sort their movie reviews by genre and personal preference.
+
+   4) Movie Recommendations: A personalized movie recommendation section based on the user's previously watched and reviewed movies.
+
+This user page will provide a more personalized and organized experience for movie enthusiasts and will help users keep track of their favorite films and genres.
+
+## Search Bar: 
+- In the future, I would like to incorporate a search bar on the main screen to make it easier for users to find specific 
+  movie  titles or directors. 
+
 
 # Testing
 
@@ -249,4 +270,4 @@ The development of this website utilized a range of technologies, including:
 # Acknowledgements
 
 I would like to thank my mentor Spencer for his support and for taking the time to review this project.  
-I am also thankful for my dear friend Francesco for being a constant source of support, and for my family members Martina and Cosimo for their love and encouragement."
+I am also thankful for my dear friend Francesco for being a constant source of support, and for my family members Martina and Cosimo for their love and encouragement.
