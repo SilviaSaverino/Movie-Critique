@@ -230,6 +230,19 @@ As part of ensuring the quality and reliability of the website, manual testing w
 ## Github
 
 # Technologies Used
+The development of this website utilized a range of technologies, including:
+
+   - HTML - Used to structure all the templates on the site and create the basic layout.
+   - CSS - Enhanced the overall appearance of the site with additional styling.
+   - Python - Implemented the website's functionalities with the aid of packages listed in the requirements.txt file.
+   - Django - A Python framework that was chosen to build the website.
+   - Heroku - The platform used to deploy the site publicly, making it accessible to users worldwide.
+   - Heroku ElephantSQL - The database solution used during both development and deployment phases.
+   - JavaScript - A minimal amount of JavaScript was used to create user-friendly features such as fading out alerts 
+     and a button that takes users back to the top of the screen.
+   - Bootstrap 4 - Provided pre-designed layouts and styling options for the HTML templates.
+   - Lucid Chart - to create database schema diagram
+   - Cloudinary - Hosted all of the website's static files, ensuring efficient and fast loading times for users.
 
 # Credits 
 
