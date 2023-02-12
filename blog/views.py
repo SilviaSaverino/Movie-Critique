@@ -162,7 +162,8 @@ def UserRequestCreate(request):
     if request.method == 'POST':
         form = UserRequestForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            form.approved = False
+            form.save(user=request.user)
             messages.success(
                 request, 'Director request submitted successfully')
             return redirect('your_request')
@@ -202,6 +203,3 @@ class YourRequest(generic.ListView):
     model = UserRequest
     template_name = 'your_request.html'
     context_object_name = 'user_requests'
-
-    # def get_queryset(self):
-    #     return UserRequest.objects.filter(user=self.request.user)

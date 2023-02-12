@@ -21,7 +21,7 @@
 
                     {% if user.is_authenticated %}
 
-                    <!-- {% if request.author == user %}                      CHECK WITH MENTOR --> 
+                    {% if request.author == user %} 
                     <button type="submit" class="update">
                         <a href="{% url 'edit_request' request.id %}">
                             <i class="fa-regular fa-pen-to-square"></i>
@@ -32,7 +32,7 @@
                             <i class="fa-regular fa-trash-can"></i>
                         </a>
                     </button>
-                    <!-- {% endif %} -->
+                    {% endif %}
                     {% endif %}
                     <hr>
                     <p class="request-pending"><i class="fa-regular fa-hourglass-half"></i> This request is still waiting approval</p>
