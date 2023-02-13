@@ -234,6 +234,12 @@ As part of ensuring the quality and reliability of the website, manual testing w
 
 ## Bugs & Fixes
 
+While building the website, I encountered several bugs that required fixes. Of all the bugs, I believe that the following posed the greatest risk to the user experience:
+
+   - Upon logging in, users were able to edit and cancel their own reviews or requests. However, due to a flaw in my code, others could easily manipulate the URL by changing the ID number and access the ability to edit or cancel other users' reviews or requests.
+
+![screenshot of urls reviews id/edit](/MovieCritique/docs/editbug.png)   
+
 # Deployment
 
 ## Deployment to Heroku 
