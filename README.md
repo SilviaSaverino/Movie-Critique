@@ -267,6 +267,8 @@ To fix this, the HttpResponse was replaced with an error message indicating that
 
 ### Django project creation
 
+To get started with developing your Django web application, you'll need to perform the following steps:
+
 1) - Install Django and Gunicorn using the following command: pip3 install django gunicorn. These are essential components for building a Django web application.
 2) - Install supporting database libraries dj_database_url and psycopg2 using the command pip install dj_database_url psycopg2. These will allow you to connect your Django application to a PostgreSQL database.
 3) - Install the Cloudinary library to manage your application's static files with the command pip install   dj-3-cloudinary-storage. This library will allow you to store your static files on the Cloudinary platform.
@@ -278,6 +280,16 @@ To fix this, the HttpResponse was replaced with an error message indicating that
 9) - Test that your server is working locally using the command python manage.py runserver. This will start the Django development server on your local machine.
 
 ### Heroku app creation
+
+To host your Django app on Heroku, you'll need to perform the following steps:
+
+1) - Navigate to the Heroku website and create an account using your email address and a password. If you already have an account, log in to your account.
+2) - Activate your account by following the authentication email that Heroku sends to your email account.
+3) - Click the "New" button on the top right corner of the Heroku dashboard and select "Create new app" from the dropdown menu.
+4) - Choose a unique name for your application and select the region where you want to deploy your app.
+5) - Click the "Create app" button to create your new app.
+6) - Go to the "Resources" tab on the Heroku dashboard and scroll down to the "Add-ons" section. Look for "Heroku Postgres" and add it to your app.
+7) - In the "Settings" tab, scroll down to "Reveal Config Vars". You'll see a DATABASE_URL variable with a value. Copy the entire value, including postgres://, the username, the password, the host, the port, and the database name.
 
 ### Enviroment Variables 
 
