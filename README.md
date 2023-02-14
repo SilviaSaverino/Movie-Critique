@@ -294,7 +294,10 @@ The development of this website utilized a range of technologies, including:
 
 # Credits 
 
+To complete this project, I relied on various sources of information, including videos from YouTube, articles found online, the W3School website, and Stack Overflow. 
+
 # Acknowledgements
 
 I would like to thank my mentor Spencer for his support and for taking the time to review this project.  
-I am also thankful for my dear friend Francesco for being a constant source of support, and for my family members Martina and Cosimo for their love and encouragement.
+I am thankful for my dear friend Francesco for being a constant source of support, and for my family members Martina and Cosimo for their love and encouragement.
+I would also like to acknowledge the creators and contributors of the online resources mentioned in the Credits section for providing valuable guidance and insights.
