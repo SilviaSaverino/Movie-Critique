@@ -189,7 +189,7 @@ def UserRequestUpdate(request, request_id):
             form.save()
             messages.warning(
                 request, "Your edited request is ready")
-            return redirect('your_requests')
+            return redirect('your_request')
     else:
         form = UserRequestForm(instance=user_request)
     return render(request, 'director_request_form.html', {'form': form})
