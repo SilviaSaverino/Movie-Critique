@@ -238,8 +238,31 @@ While building the website, I encountered several bugs that required fixes. Of a
 
    - Upon logging in, users were able to edit and cancel their own reviews or requests. However, due to a flaw in my code, others could easily manipulate the URL by changing the ID number and access the ability to edit or cancel other users' reviews or requests.
 
-![screenshot of urls reviews id/edit](/MovieCritique/docs/editbug.png)   
+The initial code wasn't properly considering the user's ability to edit a different review by simply manipulating the url id number.
 
+![screenshot of urls reviews id/edit](/MovieCritique/docs/originalbug.png)  
+
+
+![screenshot of urls reviews id/edit](/MovieCritique/docs/bughttpresponse.png) 
+
+
+An HttpResponse was first used to prevent a user from editing a review by changing the id number in the URL, but it was discovered that the user name and the author of the review were matching, but their data types were different, which was causing the HttpResponse to be returned.
+
+To resolve this issue, the code was updated to convert both the user name and the author of the review into strings.
+
+![screenshot of urls reviews id/edit](/MovieCritique/docs/bugtype.png) 
+
+
+However, after the HttpResponse was triggered, it was noted that the user wasn't being redirected back to the site. 
+
+!![screenshot of urls reviews id/edit](/MovieCritique/docs/bugid403.png)  
+
+
+To fix this, the HttpResponse was replaced with an error message indicating that the user can't edit other reviews or requests, and a redirect was added to take the user back to the previous page of comments/reviews or the director request.
+
+![screenshot of urls reviews id/edit](/MovieCritique/docs/cannotedit.png)
+
+   
 # Deployment
 
 ## Deployment to Heroku 

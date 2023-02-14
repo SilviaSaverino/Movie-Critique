@@ -185,7 +185,8 @@ def UserRequestUpdate(request, request_id):
     """
     user_request = get_object_or_404(UserRequest, id=request_id)
     if str(user_request.author) != str(request.user.username):
-        return HttpResponse("You cannot edit this request", status=403)
+        messages.error(request, "You cannot edit a different request")
+        return redirect('your_request')
     if request.method == 'POST':
         form = UserRequestForm(request.POST, instance=user_request)
         if form.is_valid():
