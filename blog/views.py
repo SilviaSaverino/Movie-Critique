@@ -101,6 +101,9 @@ def edit_review(request, review_id):
     previously submitted, by handling the post request.
     """
     review = get_object_or_404(Comment, id=review_id)
+    if review.author.username != request.user.username:
+        messages.error(request, "You cannot edit a different review")
+        return redirect('post_detail', review.post.slug)
     if request.method == 'POST':
         form = CommentForm(request.POST, instance=review)
         if form.is_valid():
