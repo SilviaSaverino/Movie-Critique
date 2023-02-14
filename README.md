@@ -267,6 +267,16 @@ To fix this, the HttpResponse was replaced with an error message indicating that
 
 ### Django project creation
 
+1) - Install Django and Gunicorn using the following command: pip3 install django gunicorn. These are essential components for building a Django web application.
+2) - Install supporting database libraries dj_database_url and psycopg2 using the command pip install dj_database_url psycopg2. These will allow you to connect your Django application to a PostgreSQL database.
+3) - Install the Cloudinary library to manage your application's static files with the command pip install   dj-3-cloudinary-storage. This library will allow you to store your static files on the Cloudinary platform.
+4) - Create a file for your application's dependencies using the command pip freeze --local > requirements.txt. This will generate a requirements.txt file that lists all the packages and libraries required to run your application.
+5) - Create a Django project using the command django-admin startproject project_name .. Replace project_name with the name of your project.
+6) - Create a Django app using the command python manage.py startapp app_name. Replace app_name with the name of your app.
+7) - Add your app to the list of installed apps in the settings.py file by adding 'app_name' to the INSTALLED_APPS list.
+8) - Migrate your database using the command python manage.py migrate. This will create the necessary database tables for your app.
+9) - Test that your server is working locally using the command python manage.py runserver. This will start the Django development server on your local machine.
+
 ### Heroku app creation
 
 ### Enviroment Variables 
