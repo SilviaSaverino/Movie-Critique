@@ -1,7 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+# this is the code added
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.contrib import messages
+# --------
 from django.shortcuts import redirect
 from .models import Post, MovieGenre, Director, Comment, UserRequest
 from .forms import CommentForm, UserRequestForm   # MovieGenreForm
@@ -177,6 +181,9 @@ def UserRequestUpdate(request, request_id):
     Handle editing of a director request
     """
     user_request = get_object_or_404(UserRequest, id=request_id)
+    # this is the code added.
+    if user_request.author != request.user.username:
+        return HttpResponse("You cannot edit this request", status=403)
     if request.method == 'POST':
         form = UserRequestForm(request.POST, instance=user_request)
         if form.is_valid():
