@@ -181,8 +181,7 @@ def UserRequestUpdate(request, request_id):
     Handle editing of a director request
     """
     user_request = get_object_or_404(UserRequest, id=request_id)
-    # this is the code added.
-    if user_request.author != request.user.username:
+    if str(user_request.author) != str(request.user.username):
         return HttpResponse("You cannot edit this request", status=403)
     if request.method == 'POST':
         form = UserRequestForm(request.POST, instance=user_request)
