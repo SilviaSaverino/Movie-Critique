@@ -3,7 +3,9 @@
 {% block content %}
 
 <body>
-  <img src="https://res.cloudinary.com/dabrhdlgw/image/upload/v1676384192/project4/heroimg_frb6hk.jpg" alt="" class="hero">
+  <img src="https://res.cloudinary.com/dabrhdlgw/image/upload/v1676384192/project4/heroimg_frb6hk.jpg"
+    alt="hero image of Movie Critique website featuring pop art drawing of popcorn, film roll, movie ticket and director clapper stick"
+    class="hero">
   <div class="container about">
     <h1>MovieCritique</h1>
     <hr>
@@ -43,7 +45,7 @@
                   <hr>
                   <h5 class="card-title">{{ post.title }}</h5>
                   <hr>
-                  <p class="card-text">{{ post.excerpt }}</p>                  
+                  <p class="card-text">{{ post.excerpt }}</p>
                   <p class="author">Posted by: <br> {{ post.author }}</p>
                 </div>
               </div>
@@ -51,8 +53,9 @@
             <div class="btn-bottom">
               <a href="{% url 'post_detail' post.slug %}" class="btn btn-primary">View Reviews</a>
               <a href="{% url 'moviegenre_list' %}" class="btn btn-secondary">Directors&Genre</a>
-              <hr/>
-              <p class="card-text text-muted h6">{{ post.created_on}} <i class="fa-regular fa-heart"></i> {{ post.number_of_likes }}</p>
+              <hr />
+              <p class="card-text text-muted h6">{{ post.created_on}} <i class="fa-regular fa-heart"></i>
+                {{ post.number_of_likes }}</p>
             </div>
           </div>
         </div>
