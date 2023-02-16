@@ -74,7 +74,8 @@ a {
 }
 
 .card-body {
-  max-height: 800px;
+  min-height: 500px;
+  max-height: 600px;
   word-wrap: break-word;
   overflow: auto;
 }
