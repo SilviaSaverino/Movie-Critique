@@ -24,9 +24,9 @@
             <div class="row single-director">
                 <div class="col-4">
                     {% if "placeholder" in director.featured_image.url %}
-                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
+                    <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" alt="default image replacing missing director pictures" width="100%">
                     {% else %}
-                    <img src=" {{ director.featured_image.url }}" width="100%">
+                    <img src=" {{ director.featured_image.url }}" alt="picture of director" width="100%">
                     {% endif %}
                 </div>
                 <div class="col-8">
