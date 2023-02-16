@@ -130,7 +130,7 @@ a {
 /*-------------------------------------------------------------post detail page----------------------------------------*/
 #movie-description {
   word-wrap: break-word;
-  max-height: 210px;
+  max-height: 350px;
   overflow: auto;
 }
 
