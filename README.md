@@ -218,6 +218,10 @@ This user page will provide a more personalized and organized experience for mov
 
 ### Css Validation
 
+No issues were found on Movie Critique css file.
+
+![screenshot of successful css validation](/MovieCritique/docs/cssvalidator.png)
+
 ### JS Validation
 
 ### Python Validation
