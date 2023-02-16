@@ -435,6 +435,12 @@ input {
     max-height: fit-content;
   }
 }
+/*---------------------- movie description ------------*/
+@media (max-width: 650px) {
+  #movie-description {
+    max-height: 200px;
+  }
+}
 
 /*---------------------- directors bio ------------*/
 @media (min-width: 650px) and (max-width: 1200px) {
@@ -454,4 +460,5 @@ input {
     width: 100%;
     margin-bottom: 1rem;
   }
+  
 }
