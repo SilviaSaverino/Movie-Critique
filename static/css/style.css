@@ -57,6 +57,7 @@ a {
 .about {
   color: antiquewhite;
   background-color: rgba(44, 4, 4, 0.6);
+  padding: 10px;
 }
 
 .about h1 {
