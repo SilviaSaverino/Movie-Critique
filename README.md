@@ -268,10 +268,6 @@ Positive results were also achieved for mobiles.
 
 ![screenshot of lighthouse mobile result](/MovieCritique/docs/lighthousemobileok.png)
 
-
-
-
-
 ## Manual testing
 
 As part of ensuring the quality and reliability of the website, manual testing was conducted to validate its functionality and user experience. The following is a screenshot of a list of the functionalities that were tested.
