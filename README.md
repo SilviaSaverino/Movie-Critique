@@ -249,7 +249,10 @@ No issues were found on Movie Critique css file.
 
 ### JS Validation
 
+
 ### Python Validation
+
+The Python code was validated using Code Institute's Python validator, and only minor errors were found, such as missing blank spacing or whitespace and lines being too long. These issues were easily resolved.
 
 ## Lighthouse
 
