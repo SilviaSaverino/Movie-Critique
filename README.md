@@ -340,7 +340,9 @@ The development of this website utilized a range of technologies, including:
    - JavaScript - A minimal amount of JavaScript was used to create user-friendly features such as fading out alerts 
      and a button that takes users back to the top of the screen.
    - Bootstrap 4 - Provided pre-designed layouts and styling options for the HTML templates.
-   - Lucid Chart - To create database schema diagram
+   - Lucid Chart - To create database schema diagram.
+   - Balsamiq - To create initial wireframes.
+   - Color Picker - To select a color palette for the website.
    - Cloudinary - Hosted all of the website's static files, ensuring efficient and fast loading times for users.
 
 # Credits 
