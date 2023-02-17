@@ -8,7 +8,7 @@ from django.contrib import messages
 # --------
 from django.shortcuts import redirect
 from .models import Post, MovieGenre, Director, Comment, UserRequest
-from .forms import CommentForm, UserRequestForm   # MovieGenreForm
+from .forms import CommentForm, UserRequestForm
 
 
 class PostList(generic.ListView):

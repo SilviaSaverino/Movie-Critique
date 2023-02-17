@@ -53,9 +53,6 @@ class Comment(models.Model):
         return f"Review {self.body} by {self.name}"
 
 
-# ----------------------------------------------TO BE CHECKED WITH MENTOR
-
-
 class MovieGenre(models.Model):
     """
     Table model to represent movie genre
