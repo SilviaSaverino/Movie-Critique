@@ -324,7 +324,13 @@ To host your Django app on Heroku, you'll need to perform the following steps:
 
 ### Settings.py
 
-### Final Deployment
+### Final Deployment on Heroku
+
+1)- After development is finished, modify the debug setting in settings.py to "DEBUG = False."
+2)- Adjust the DISABLE_COLLECTSTATIC value to 0 in the Heroku settings config vars.
+3)- It is recommended to use manual deployment only in Heroku, as the DEBUG setting must be switched to True for development and  False for production.
+4)- To deploy the app manually, select the "Deploy Branch" button, making sure to choose the default "main" option in the dropdown menu. 
+5)- Upon successful deployment, a message stating "Your app was successfully deployed" will appear. Click "view" to access the deployed app in your browser.
 
 ## Github
 
