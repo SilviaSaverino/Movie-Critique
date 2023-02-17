@@ -327,14 +327,32 @@ To host your Django app on Heroku, you'll need to perform the following steps:
 ### Final Deployment on Heroku
 
 1)- After development is finished, modify the debug setting in settings.py to "DEBUG = False."
-2)- Adjust the DISABLE_COLLECTSTATIC value to 0 in the Heroku settings config vars.
+2)- Adjust the DISABLE_COLLECTSTATIC value to 0 in the Heroku settings config vars
 3)- It is recommended to use manual deployment only in Heroku, as the DEBUG setting must be switched to True for development and  False for production.
 4)- To deploy the app manually, select the "Deploy Branch" button, making sure to choose the default "main" option in the dropdown menu. 
 5)- Upon successful deployment, a message stating "Your app was successfully deployed" will appear. Click "view" to access the deployed app in your browser.
 
 ## Github
 
+### Fork repository
+
+Follow these steps to fork your repository:
+
+1)- Locate the GitHub repository for the code you want to view and edit.
+2)- Click on the "Fork" button located in the top right-hand corner.
+3)- This will take you to your own repository, which is a fork of the original branch with the same name.
+
+### Clone repository
+
+Follow these steps to clone your repository:
+
+1)- Go to the GitHub repository you just forked.
+2)- Click on the "Code" button on the right-hand side of the screen, and select "HTTPS." Copy the provided link.
+3)- Open Git Bash and change the current working directory to the location where you want to store the cloned directory.
+4)- Type "git clone" followed by the URL you copied earlier, and press "Enter" to create your local clone.
+
 # Technologies Used
+
 The development of this website utilized a range of technologies, including:
 
    - HTML - Used to structure all the templates on the site and create the basic layout.
