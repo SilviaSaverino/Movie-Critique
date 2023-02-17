@@ -62,6 +62,27 @@ Additionally, Github issues were employed to generate User Stories and any other
 •	The MovieGenre model has a many-to-many relationship with the Director model, meaning that a single genre can be associated with multiple directors and a single director can be associated with multiple genres. The relationship is defined by a ManyToManyField in the Director model to the MovieGenre model.
 
 # Design wireframes
+In order to gain a clearer visual representation of the layout and structure for Movie Critique, I utilized Balsamiq to create low-fidelity wireframes. These rough sketches provided a basic outline for the website's design and functionality.
+
+- Homepage
+
+![screenshot of homepage wireframe](/MovieCritique/docs/wireframehome.png)
+
+- Reviews page
+
+![screenshot of reviews page wireframe](/MovieCritique/docs/wireframereviewspage.png)
+
+- Genre page
+
+![screenshot of genre page wireframe](/MovieCritique/docs/wireframegenre.png)
+
+- Director page
+
+![screenshot of director page wireframe](/MovieCritique/docs/wireframedirectorspage.png)
+
+- Director Request form
+
+![screenshot of director request form wireframe](/MovieCritique/docs/wireframerequestform.png)
 
 # Website Structure
 
@@ -76,6 +97,10 @@ At all time the users will be able to log out if they wish to do so.
 The website features a distinctive color scheme, utilizing a rich dark yellow/orange shade complemented by bright white and eye-catching green accents. The selection of these colors was deliberate, aimed at creating a visually impactful design while highlighting the images on the site.
 
 Throughout the website, a visually striking dark background is paired with an elegant antique white color for the content to clearly convey information to the user. This color scheme is applied consistently for the display of introductions, posts, and administrative messages.
+
+With the exception of the buttons and some shades of green, all of the colors utilized on this website were extracted from the background image using a Color Picker website tool.
+
+![screenshot of color palette](/MovieCritique/docs/colourpalette.png)
 
 # Features
 
