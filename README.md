@@ -259,7 +259,13 @@ Lighthouse testing initially scored 83% in Best Practices because of the aspect 
 
 I've removed the max-height from card-img-top element and improved the score up to 92%%
 
-![screenshot of lighthouse initial result](/MovieCritique/docs/lighthouseok.png)
+![screenshot of lighthouse final result](/MovieCritique/docs/lighthouseok.png)
+
+Positive results were also achieved for mobiles.
+
+![screenshot of lighthouse mobile result](/MovieCritique/docs/lighthousemobileok.png)
+
+
 
 
 
