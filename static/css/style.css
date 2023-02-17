@@ -375,8 +375,9 @@ input {
 }
 
 .single-director img {
-  max-height: 300px;
-  width: 90%;
+  /* max-height: 300px;
+  height: auto;
+  width: 90%; */
   padding: 10px;
 }
 
