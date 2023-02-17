@@ -70,10 +70,6 @@ a {
   text-align: right;
 }
 
-/* .card-img-top {
-  max-height: 225px;
-} */
-
 .card-body {
   min-height: 500px;
   max-height: 600px;

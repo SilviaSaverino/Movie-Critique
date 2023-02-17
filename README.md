@@ -253,6 +253,16 @@ No issues were found on Movie Critique css file.
 
 ## Lighthouse
 
+Lighthouse testing initially scored 83% in Best Practices because of the aspect ratio of the images on the website. Specifically, it was caused by explicit width and height values that don't match the dimensions of the source image.
+
+![screenshot of lighthouse initial result](/MovieCritique/docs/lighthousebestpracticefail.png)
+
+I've removed the max-height from card-img-top element and improved the score up to 92%%
+
+![screenshot of lighthouse initial result](/MovieCritique/docs/lighthouseok.png)
+
+
+
 ## Manual testing
 
 As part of ensuring the quality and reliability of the website, manual testing was conducted to validate its functionality and user experience. The following is a screenshot of a list of the functionalities that were tested.
@@ -326,11 +336,11 @@ To host your Django app on Heroku, you'll need to perform the following steps:
 
 ### Final Deployment on Heroku
 
-1)- After development is finished, modify the debug setting in settings.py to "DEBUG = False."
-2)- Adjust the DISABLE_COLLECTSTATIC value to 0 in the Heroku settings config vars
-3)- It is recommended to use manual deployment only in Heroku, as the DEBUG setting must be switched to True for development and  False for production.
-4)- To deploy the app manually, select the "Deploy Branch" button, making sure to choose the default "main" option in the dropdown menu. 
-5)- Upon successful deployment, a message stating "Your app was successfully deployed" will appear. Click "view" to access the deployed app in your browser.
+1) - After development is finished, modify the debug setting in settings.py to "DEBUG = False."
+2) - Adjust the DISABLE_COLLECTSTATIC value to 0 in the Heroku settings config vars
+3) - It is recommended to use manual deployment only in Heroku, as the DEBUG setting must be switched to True for development and  False for production.
+4) - To deploy the app manually, select the "Deploy Branch" button, making sure to choose the default "main" option in the dropdown menu. 
+5) - Upon successful deployment, a message stating "Your app was successfully deployed" will appear. Click "view" to access the deployed app in your browser.
 
 ## Github
 
