@@ -338,18 +338,18 @@ To host your Django app on Heroku, you'll need to perform the following steps:
 
 Follow these steps to fork your repository:
 
-1)- Locate the GitHub repository for the code you want to view and edit.
-2)- Click on the "Fork" button located in the top right-hand corner.
-3)- This will take you to your own repository, which is a fork of the original branch with the same name.
+1) - Locate the GitHub repository for the code you want to view and edit.
+2) - Click on the "Fork" button located in the top right-hand corner.
+3) - This will take you to your own repository, which is a fork of the original branch with the same name.
 
 ### Clone repository
 
 Follow these steps to clone your repository:
 
-1)- Go to the GitHub repository you just forked.
-2)- Click on the "Code" button on the right-hand side of the screen, and select "HTTPS." Copy the provided link.
-3)- Open Git Bash and change the current working directory to the location where you want to store the cloned directory.
-4)- Type "git clone" followed by the URL you copied earlier, and press "Enter" to create your local clone.
+1) - Go to the GitHub repository you just forked.
+2) - Click on the "Code" button on the right-hand side of the screen, and select "HTTPS." Copy the provided link.
+3) - Open Git Bash and change the current working directory to the location where you want to store the cloned directory.
+4) - Type "git clone" followed by the URL you copied earlier, and press "Enter" to create your local clone.
 
 # Technologies Used
 
