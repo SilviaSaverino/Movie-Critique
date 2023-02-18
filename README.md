@@ -344,10 +344,6 @@ To host your Django app on Heroku, you'll need to perform the following steps:
 6) - Go to the "Resources" tab on the Heroku dashboard and scroll down to the "Add-ons" section. Look for "Heroku Postgres" and add it to your app.
 7) - In the "Settings" tab, scroll down to "Reveal Config Vars". You'll see a DATABASE_URL variable with a value. Copy the entire value, including postgres://, the username, the password, the host, the port, and the database name.
 
-### Enviroment Variables 
-
-### Settings.py
-
 ### Final Deployment on Heroku
 
 1) - After development is finished, modify the debug setting in settings.py to "DEBUG = False."
