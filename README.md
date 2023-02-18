@@ -19,7 +19,7 @@ Where everyone is welcomed in joining the conversation with other passionate cin
 ## User Stories:
 
 As a Site User I want to be able to:
-- register an account so that I can comment and like
+- register an account, login, logout so that I can use all of the website functionalities.
 - select a specific movie and view its reviews so that I can decide whether or not to watch it.
 - write and submit a review for a movie so that I can share my thoughts with others.
 - edit and correct my own reviews so that I can ensure the accuracy of my feedbacks.
@@ -27,6 +27,7 @@ As a Site User I want to be able to:
 - like and unlike posts so that I can indicate my appreciation or lack thereof for the post in question.
 - request a director so that i can later find some of his/her movies on the website.
 - filter director per genre, so that i can have a better idea of what to expect from a movie of a certain director.
+
 
 ## Admin stories:
 
