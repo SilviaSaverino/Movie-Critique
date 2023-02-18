@@ -19,24 +19,24 @@ Where everyone is welcomed in joining the conversation with other passionate cin
 ## User Stories:
 
 As a Site User I want to be able to:
-- register an account, login, logout so that I can use all of the website functionalities.
-- select a specific movie and view its reviews so that I can decide whether or not to watch it.
-- write and submit a review for a movie so that I can share my thoughts with others.
-- edit and correct my own reviews so that I can ensure the accuracy of my feedbacks.
-- delete my reviews so that I can remove any inaccuracies or irrelevant content.
+- register an account, login, logout so that I can use all of the website functionalities. 
+- select a specific movie and view its reviews so that I can decide whether or not to watch it. 
+- write and submit a review for a movie so that I can share my thoughts with others. 
+- edit and correct my own reviews so that I can ensure the accuracy of my feedbacks. 
+- delete my reviews so that I can remove any inaccuracies or irrelevant content. 
 - like and unlike posts so that I can indicate my appreciation or lack thereof for the post in question.
-- request a director so that i can later find some of his/her movies on the website.
+- request a director so that i can later find some of his/her movies on the website. 
 - filter director per genre, so that i can have a better idea of what to expect from a movie of a certain director.
 
 
 ## Admin stories:
 
 As a site Admin, I want to be able to: 
-- create draft posts so that I can finish writing the content later.
-- update posts so that movie description are up to date.
+- create draft posts so that I can finish writing the content later. 
+- update posts so that movie description are up to date. 
 - read and moderate reviews to ensure that they are appropriate and do not contain any offensive content.
-- delete spam or fake reviews that are submitted to the site.
-- review user requests of a director so that i can approve them and grow my site content.
+- delete spam or fake reviews that are submitted to the site. 
+- review user requests of a director so that i can approve them and grow my site content. 
 
 # Agile
 
@@ -308,7 +308,7 @@ To fix this, the HttpResponse was replaced with an error message indicating that
 
 ### Github project issue
 
-I encountered an issue when attempting to modify my user stories in GitHub Issues and Projects. Initially, I had trouble editing or deleting functionalities and saving them, but I was able to resolve this by rewriting them. However, I realized too late that with this approach it might seem that i did not follow Agile methodology, and as a result, the creation date of these stories on my GitHub profile is now February 18th, instead of January 15th.
+I encountered an issue when attempting to modify my user stories in GitHub Issues and Projects. Initially, I had trouble editing or deleting functionalities and saving them, but I was able to resolve this by rewriting some of them. However, I realized too late that with this approach it might seem that i did not follow Agile methodology for all of them, and as a result, the creation date of these modified stories on my GitHub profile is now February 18th, instead of January 15th.
 
 ![screenshot of user stories created on 15Jan](/MovieCritique/docs/userstoryissuegithub.png)
 
