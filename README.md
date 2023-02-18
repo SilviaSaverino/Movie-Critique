@@ -304,7 +304,15 @@ However, after the HttpResponse was triggered, it was noted that the user wasn't
 
 To fix this, the HttpResponse was replaced with an error message indicating that the user can't edit other reviews or requests, and a redirect was added to take the user back to the previous page of comments/reviews or the director request.
 
-![screenshot of urls reviews id/edit](/MovieCritique/docs/cannotedit.png)
+![screenshot of urls reviews id/edit](/MovieCritique/docs/cannotedit.png).
+
+### Github project issue
+
+I encountered an issue when attempting to modify my user stories in GitHub Issues and Projects. Initially, I had trouble editing or deleting functionalities and saving them, but I was able to resolve this by rewriting them. However, I realized too late that with this approach it might seem that i did not follow Agile methodology, and as a result, the creation date of these stories on my GitHub profile is now February 18th, instead of January 15th.
+
+![screenshot of user stories created on 15Jan](/MovieCritique/docs/userstoryissuegithub.png)
+
+![screenshot of edited user stories creation date](/MovieCritique/docs/userstorynewdate.png)
 
 # Deployment
 
