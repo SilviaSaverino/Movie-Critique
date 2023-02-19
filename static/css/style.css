@@ -1,6 +1,6 @@
 body {
   background-image: url(https://res.cloudinary.com/dabrhdlgw/image/upload/v1676384193/project4/mainbackground_pc50hx.jpg);
-  background-size: contain;
+  background-size: cover;
 }
 
 #msg {
