@@ -5,7 +5,8 @@
 
 <head>
     <title>Movie Critique</title>
-    <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/dabrhdlgw/image/upload/v1676384192/project4/icons8-cinema-16_vwodd5.png">
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://res.cloudinary.com/dabrhdlgw/image/upload/v1676384192/project4/icons8-cinema-16_vwodd5.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
@@ -61,7 +62,7 @@
     </nav>
     <div class="container messages">
         <div class="row">
-            <div class="col-md-8 offset-md-2"> {% for message in messages %} 
+            <div class="col-md-8 offset-md-2"> {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                     {{ message | safe }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -69,48 +70,46 @@
                 {% endfor%}
             </div>
         </div>
-        <!-- Main-->
-        <main class="flex-shrink-0 main-bg main-content">
-            {% block content %}
+    </div>
+    <!-- Main-->
+    <main class="flex-shrink-0 main-bg main-content">
+        {% block content %}
 
-            {% endblock content %}
-        </main>
-        <!-- Footer -->
-        <footer class="footer">
-            <p class="m-0 text-center text-black">Made for educationals purposes only</p>
-            <div class="m-0 text-center text-black">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Facebook page (opens in a new tab)"
-                    title="Link to Movie Critique Facebook page">
-                    <i class="fab fa-facebook ms-3"></i>
-                </a>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Twitter page (opens in a new tab)"
-                    title="Link to Movie Critique Twitter page">
-                    <i class="fab fa-twitter ms-3"></i>
-                </a>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (opens in a new tab)"
-                    title="Link to Movie Critique Instagram page">
-                    <i class="fab fa-instagram ms-3"></i>
-                </a>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener"
-                    aria-label="Visit our YouTube  page (opens in a new tab)"
-                    title="Link to Movie Critique YouTube page">
-                    <i class="fab fa-youtube ms-3"></i>
-                </a>
-            </div>
+        {% endblock content %}
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="m-0 text-center text-black">Made for educationals purposes only</p>
+        <div class="m-0 text-center text-black">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                aria-label="Visit our Facebook page (opens in a new tab)" title="Link to Movie Critique Facebook page">
+                <i class="fab fa-facebook ms-3"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                aria-label="Visit our Twitter page (opens in a new tab)" title="Link to Movie Critique Twitter page">
+                <i class="fab fa-twitter ms-3"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                aria-label="Visit our Instagram page (opens in a new tab)"
+                title="Link to Movie Critique Instagram page">
+                <i class="fab fa-instagram ms-3"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                aria-label="Visit our YouTube  page (opens in a new tab)" title="Link to Movie Critique YouTube page">
+                <i class="fab fa-youtube ms-3"></i>
+            </a>
+        </div>
 
-        </footer>
+    </footer>
 
-        <script>
-            setTimeout(function () {
-                let popupmessages = document.getElementById('msg');
-                let alert = new bootstrap.Alert(popupmessages);
-                alert.close();
-            }, 3500)
-        </script>
-        <script src="/static/javascript/script.js"></script>
+    <script>
+        setTimeout(function () {
+            let popupmessages = document.getElementById('msg');
+            let alert = new bootstrap.Alert(popupmessages);
+            alert.close();
+        }, 3500)
+    </script>
+    <script src="/static/javascript/script.js"></script>
 </body>
 
 </html>
