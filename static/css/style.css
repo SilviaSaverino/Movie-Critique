@@ -417,6 +417,12 @@ input {
     min-height: auto;
   }
 
+  .about {
+    word-wrap: break-word;
+    overflow: auto;
+    max-height: 315px;
+  }
+
   #liked-counted {
     display: flex;
     justify-content: left;
