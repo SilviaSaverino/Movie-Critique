@@ -6,6 +6,8 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.contrib import messages
 # --------
+from django.conf import settings # 404 error
+# --------
 from django.shortcuts import redirect
 from .models import Post, MovieGenre, Director, Comment, UserRequest
 from .forms import CommentForm, UserRequestForm
@@ -213,3 +215,8 @@ class YourRequest(generic.ListView):
     model = UserRequest
     template_name = 'your_requests.html'
     context_object_name = 'user_requests'
+
+
+# ---------------------------------- 404 error
+def error_404_view(request, exception):
+    return render(request, '404.html')
