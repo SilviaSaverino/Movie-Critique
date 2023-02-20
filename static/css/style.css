@@ -405,6 +405,12 @@ input {
   max-width: fit-content;
 }
 
+/* ------------------------------------------------------------ 404 page ---------------------------------------- */
+
+.page-not-found {
+  background-image: url(https://res.cloudinary.com/dabrhdlgw/image/upload/v1676930848/project4/404error_karkcb.jpg);
+}
+
 
 /* ------------------------------------------------------------ media queries---------------------------------------- */
 @media (max-width: 645px) {
