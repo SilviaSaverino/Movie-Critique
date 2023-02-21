@@ -245,8 +245,13 @@ This user page will provide a more personalized and organized experience for mov
 
 ## Validation
 
+The data and input I provided to the application have met the necessary criteria and have been verified by the validation process. The application is functioning correctly and the data I entered is accurate and formatted correctly.
+
 ### Html Validation
 
+No issues were raised with html validation.
+
+![screenshot of successful html validation](/MovieCritique/docs/htmlvalidation.png)
 
 ### Css Validation
 
