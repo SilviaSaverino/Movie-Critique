@@ -1,11 +1,24 @@
-{% extends "base.html" %}
+{% load static %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="page-not-found">
-    <p> Oooooops! Looks like nothing was found at this location.
-        Maybe try on of the social links below, click on the top menu
-        or try a different search? </p>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Critique 404 page</title>
+</head>
 
-{% endblock %}
+<body>
+    <div class="page-not-found">
+        <h2>404 Error - Page Not Found</h2>
+        <hr>
+        <p> Oooooops! Looks like nothing was found at this location. <br>
+            Go back to <a href="{% url 'home' %}">Movie Critique!</a> </p>
+        <img src="https://res.cloudinary.com/dabrhdlgw/image/upload/v1676985752/project4/404error_ww3tpp.jpg"
+            alt="image of Kevin Mcallister screaming">
+    </div>
+
+</body>
+</html>
