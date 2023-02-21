@@ -211,6 +211,11 @@ On this page, the user can view all of their requests and the status of each, wh
 
 ![screenshot of approved request](/MovieCritique/docs/approved.png)
 
+## 404 page
+
+A customed 404 page will allow users who encounter a page not found error to have a clear and easy-to-use option to return to the site homepage.
+
+![screenshot of custom 404 page](/MovieCritique/docs/404page.png)
 
 # Future features
 
@@ -242,6 +247,7 @@ This user page will provide a more personalized and organized experience for mov
 
 ### Html Validation
 
+
 ### Css Validation
 
 No issues were found on Movie Critique css file.
@@ -250,6 +256,7 @@ No issues were found on Movie Critique css file.
 
 ### JS Validation
 
+No issues were found on js file.
 
 ### Python Validation
 
