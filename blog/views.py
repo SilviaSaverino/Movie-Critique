@@ -175,7 +175,7 @@ def UserRequestCreate(request):
             form.save(user=request.user)
             messages.success(
                 request, 'Director request submitted successfully')
-            return redirect('your_requests')
+            return redirect('your_request')
     else:
         form = UserRequestForm()
     return render(request, 'director_request_form.html', {'form': form})
@@ -208,7 +208,7 @@ def UserRequestDelete(request, request_id):
     user_request = get_object_or_404(UserRequest, id=request_id)
     user_request.delete()
     messages.warning(request, "Deleting your request")
-    return redirect('your_requests')
+    return redirect('your_request')
 
 
 class YourRequest(generic.ListView):
